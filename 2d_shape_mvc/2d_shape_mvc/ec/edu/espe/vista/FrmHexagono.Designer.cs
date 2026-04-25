@@ -1,0 +1,163 @@
+﻿namespace _2d_shape_mvc.ec.edu.espe.vista
+{
+    partial class FrmHexagono
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblEntrada = new System.Windows.Forms.Label();
+            this.lblLongitud = new System.Windows.Forms.Label();
+            this.txtLongitud = new System.Windows.Forms.TextBox();
+            this.panelDibujo = new System.Windows.Forms.Panel();
+            this.lblSalida = new System.Windows.Forms.Label();
+            this.lblPerimetro = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblArea = new System.Windows.Forms.Label();
+            this.txtPerimetro = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // lblEntrada
+            // 
+            this.lblEntrada.AutoSize = true;
+            this.lblEntrada.Location = new System.Drawing.Point(12, 9);
+            this.lblEntrada.Name = "lblEntrada";
+            this.lblEntrada.Size = new System.Drawing.Size(54, 16);
+            this.lblEntrada.TabIndex = 0;
+            this.lblEntrada.Text = "Entrada";
+            // 
+            // lblLongitud
+            // 
+            this.lblLongitud.AutoSize = true;
+            this.lblLongitud.Location = new System.Drawing.Point(22, 45);
+            this.lblLongitud.Name = "lblLongitud";
+            this.lblLongitud.Size = new System.Drawing.Size(64, 16);
+            this.lblLongitud.TabIndex = 1;
+            this.lblLongitud.Text = "Longitud: ";
+            // 
+            // txtLongitud
+            // 
+            this.txtLongitud.Location = new System.Drawing.Point(92, 42);
+            this.txtLongitud.Name = "txtLongitud";
+            this.txtLongitud.Size = new System.Drawing.Size(100, 22);
+            this.txtLongitud.TabIndex = 2;
+            // 
+            // panelDibujo
+            // 
+            this.panelDibujo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDibujo.Location = new System.Drawing.Point(317, 9);
+            this.panelDibujo.Name = "panelDibujo";
+            this.panelDibujo.Size = new System.Drawing.Size(469, 428);
+            this.panelDibujo.TabIndex = 3;
+            this.panelDibujo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDibujo_Paint);
+            // 
+            // lblSalida
+            // 
+            this.lblSalida.AutoSize = true;
+            this.lblSalida.Location = new System.Drawing.Point(12, 146);
+            this.lblSalida.Name = "lblSalida";
+            this.lblSalida.Size = new System.Drawing.Size(53, 16);
+            this.lblSalida.TabIndex = 4;
+            this.lblSalida.Text = "Salidas";
+            // 
+            // lblPerimetro
+            // 
+            this.lblPerimetro.AutoSize = true;
+            this.lblPerimetro.Location = new System.Drawing.Point(22, 175);
+            this.lblPerimetro.Name = "lblPerimetro";
+            this.lblPerimetro.Size = new System.Drawing.Size(71, 16);
+            this.lblPerimetro.TabIndex = 5;
+            this.lblPerimetro.Text = "Perímetro: ";
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(15, 86);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 6;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblArea
+            // 
+            this.lblArea.AutoSize = true;
+            this.lblArea.Location = new System.Drawing.Point(44, 211);
+            this.lblArea.Name = "lblArea";
+            this.lblArea.Size = new System.Drawing.Size(42, 16);
+            this.lblArea.TabIndex = 7;
+            this.lblArea.Text = "Área: ";
+            // 
+            // txtPerimetro
+            // 
+            this.txtPerimetro.Location = new System.Drawing.Point(92, 172);
+            this.txtPerimetro.Name = "txtPerimetro";
+            this.txtPerimetro.Size = new System.Drawing.Size(100, 22);
+            this.txtPerimetro.TabIndex = 8;
+            // 
+            // txtArea
+            // 
+            this.txtArea.Location = new System.Drawing.Point(92, 208);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(100, 22);
+            this.txtArea.TabIndex = 9;
+            // 
+            // FrmHexagono
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtArea);
+            this.Controls.Add(this.txtPerimetro);
+            this.Controls.Add(this.lblArea);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.lblPerimetro);
+            this.Controls.Add(this.lblSalida);
+            this.Controls.Add(this.panelDibujo);
+            this.Controls.Add(this.txtLongitud);
+            this.Controls.Add(this.lblLongitud);
+            this.Controls.Add(this.lblEntrada);
+            this.Name = "FrmHexagono";
+            this.Text = "Hexagono";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblEntrada;
+        private System.Windows.Forms.Label lblLongitud;
+        private System.Windows.Forms.TextBox txtLongitud;
+        private System.Windows.Forms.Panel panelDibujo;
+        private System.Windows.Forms.Label lblSalida;
+        private System.Windows.Forms.Label lblPerimetro;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label lblArea;
+        private System.Windows.Forms.TextBox txtPerimetro;
+        private System.Windows.Forms.TextBox txtArea;
+    }
+}
