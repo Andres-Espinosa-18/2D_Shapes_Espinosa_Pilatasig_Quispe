@@ -13,12 +13,13 @@ using System.Windows.Forms;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
-    public partial class FrmHexagono : Form
+    public partial class FrmCuadraro : Form
     {
         private Validacion v;
         private FiguraControlador controlador;
         private IDibujador dibujador;
-        public FrmHexagono()
+
+        public FrmCuadraro()
         {
             InitializeComponent();
             this.v = new Validacion();
@@ -30,22 +31,23 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             txtLongitud.Clear();
             txtPerimetro.Clear();
             txtArea.Clear();
-            lblMensaje.Text = "";
 
+            lblMensaje.Text = "";
             dibujador = null;
             panelDibujo.Invalidate();
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            if (v.isEmpty(txtLongitud.Text)){
-                lblMensaje.Text = "La entrada no puede estar vacia. Ingrese un número";
+            if (v.isEmpty(txtLongitud.Text))
+            {
+                lblMensaje.Text = "La entrada no puede estar vacia. Ingrese un número.";
                 return;
             }
 
             if (!v.isNumbers(txtLongitud.Text))
             {
-                lblMensaje.Text = "La entrada debe ser numérica. Ingrese un número";
+                lblMensaje.Text = "La entrada debe ser numérica. Ingrese un número.";
                 return;
             }
 
@@ -58,14 +60,11 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
                 return;
             }
 
-            lblMensaje.Text = "";
-
-            var resultado=controlador.calcularHexagono(lado);
-            dibujador = resultado.hexagono.crearDibujador();
+            var resultado = controlador.calcularRectangulo(lado, lado);
+            dibujador = resultado.rectangulo.crearDibujador();
 
             txtPerimetro.Text = resultado.perimetro.ToString("F2");
-            txtArea.Text=resultado.area.ToString("F2");
-
+            txtArea.Text = resultado.area.ToString("F2");
             panelDibujo.Invalidate();
         }
 
@@ -77,14 +76,14 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnResetear_Click(object sender, EventArgs e)
         {
             limpiarFormulario();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

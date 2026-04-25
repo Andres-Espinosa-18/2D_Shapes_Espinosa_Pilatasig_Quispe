@@ -33,6 +33,7 @@
             this.miRectanguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miTrianguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hexagonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             this.shapeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miRectanguloToolStripMenuItem,
             this.miTrianguloToolStripMenuItem,
-            this.hexagonoToolStripMenuItem});
+            this.hexagonoToolStripMenuItem,
+            this.cuadradoToolStripMenuItem});
             this.shapeToolStripMenuItem.Name = "shapeToolStripMenuItem";
             this.shapeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.shapeToolStripMenuItem.Text = "Shape";
@@ -78,6 +80,13 @@
             this.hexagonoToolStripMenuItem.Text = "Hexagono";
             this.hexagonoToolStripMenuItem.Click += new System.EventHandler(this.hexagonoToolStripMenuItem_Click);
             // 
+            // cuadradoToolStripMenuItem
+            // 
+            this.cuadradoToolStripMenuItem.Name = "cuadradoToolStripMenuItem";
+            this.cuadradoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cuadradoToolStripMenuItem.Text = "Cuadrado";
+            this.cuadradoToolStripMenuItem.Click += new System.EventHandler(this.cuadradoToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -102,5 +111,6 @@
         private System.Windows.Forms.ToolStripMenuItem miRectanguloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miTrianguloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hexagonoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuadradoToolStripMenuItem;
     }
 }

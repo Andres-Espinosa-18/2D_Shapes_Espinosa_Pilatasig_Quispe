@@ -37,5 +37,12 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             frmHexagono.MdiParent = this;
             frmHexagono.Show();
         }
+
+        private void cuadradoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCuadraro frmCuadrado = new FrmCuadraro();
+            frmCuadrado.MdiParent = this;
+            frmCuadrado.Show();
+        }
     }
 }
