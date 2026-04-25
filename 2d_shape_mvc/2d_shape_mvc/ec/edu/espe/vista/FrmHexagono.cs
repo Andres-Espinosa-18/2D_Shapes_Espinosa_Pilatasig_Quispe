@@ -25,16 +25,46 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             this.controlador = new FiguraControlador();
         }
 
+        private void limpiarFormulario()
+        {
+            txtLongitud.Clear();
+            txtPerimetro.Clear();
+            txtArea.Clear();
+            lblMensaje.Text = "";
+
+            dibujador = null;
+            panelDibujo.Invalidate();
+        }
+
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            if (v.isEmpty(txtLongitud.Text)){
+                lblMensaje.Text = "La entrada no puede estar vaica. Ingrese un número";
+                return;
+            }
+
+            if (!v.isNumbers(txtLongitud.Text))
+            {
+                lblMensaje.Text = "La entrada debe ser numérica. Ingrese un número";
+                return;
+            }
+
             double lado;
             lado = double.Parse(txtLongitud.Text.Trim());
+
+            if (!v.isPositive(lado))
+            {
+                lblMensaje.Text = "La entrada debe ser positiva. Ingrese un número válido";
+                return;
+            }
+
+            lblMensaje.Text = "";
 
             var resultado=controlador.calcularHexagono(lado);
             dibujador = resultado.hexagono.crearDibujador();
 
-            txtPerimetro.Text = resultado.perimetro.ToString();
-            txtArea.Text=resultado.area.ToString();
+            txtPerimetro.Text = resultado.perimetro.ToString("F2");
+            txtArea.Text=resultado.area.ToString("F2");
 
             panelDibujo.Invalidate();
         }
@@ -45,6 +75,16 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             if (dibujador == null) return;
 
             dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnResetear_Click(object sender, EventArgs e)
+        {
+            limpiarFormulario();
         }
     }
 }

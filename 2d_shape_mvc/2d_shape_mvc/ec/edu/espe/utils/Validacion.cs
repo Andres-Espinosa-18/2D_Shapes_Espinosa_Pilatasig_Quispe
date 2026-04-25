@@ -23,7 +23,7 @@ namespace _2d_shape_mvc.ec.edu.espe.utils
         }
 
         public bool isPositive(double number){
-            return number >= 0;
+            return number > 0;
         }
 
         public bool validarTriangulo(double l1, double l2, double l3)

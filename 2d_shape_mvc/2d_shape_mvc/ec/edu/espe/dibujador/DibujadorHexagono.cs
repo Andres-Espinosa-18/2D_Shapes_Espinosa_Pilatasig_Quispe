@@ -19,31 +19,30 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
 
         public void dibujarFigura(Graphics g, int w, int h)
         {
-            int lado = (int)hexagono.getLado();
+            int cx = w / 2;
+            int cy = h / 2;
 
-            int cx = (int)(w / 2);
-            int cy = (int)(h / 2);
+            int size = Math.Min(w, h);
+            float radio = size * 0.4f;
 
-            Point point0= new Point(cx,cy);
-            List<Point> vertices= new List<Point>();
+            List<PointF> vertices = new List<PointF>();
 
-            for (int i = 0; i < 6; i++) {
-                double angulo = (i * 60) * Math.PI / 180;
-                int x = (int)(lado * Math.Cos(angulo));
-                int y = (int)(lado * Math.Sin(angulo));
-                Point vertice = new Point(cx+x,cy+y);
-                vertices.Add(vertice);
-            }
-
-            vertices.Add(vertices[0]);
-
-            for(int i = 0; i < vertices.Count()-1; i++)
+            for (int i = 0; i < 6; i++)
             {
-                Point puntoActual = vertices[i];
-                Point puntoSiguiente = vertices[i + 1];
-                g.DrawPolygon(Pens.Coral, new Point[] {point0, puntoActual, puntoSiguiente});
+                double angulo = (i * 60) * Math.PI / 180;
+
+                float x = (float)(radio * Math.Cos(angulo));
+                float y = (float)(radio * Math.Sin(angulo));
+
+                vertices.Add(new PointF(cx + x, cy + y));
             }
 
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (Pen p = new Pen(Color.Coral, 3))
+            {
+                g.DrawPolygon(p, vertices.ToArray());
+            }
         }
     }
 }

@@ -38,6 +38,9 @@
             this.lblArea = new System.Windows.Forms.Label();
             this.txtPerimetro = new System.Windows.Forms.TextBox();
             this.txtArea = new System.Windows.Forms.TextBox();
+            this.btnResetear = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEntrada
@@ -115,6 +118,7 @@
             // 
             this.txtPerimetro.Location = new System.Drawing.Point(92, 172);
             this.txtPerimetro.Name = "txtPerimetro";
+            this.txtPerimetro.ReadOnly = true;
             this.txtPerimetro.Size = new System.Drawing.Size(100, 22);
             this.txtPerimetro.TabIndex = 8;
             // 
@@ -122,14 +126,45 @@
             // 
             this.txtArea.Location = new System.Drawing.Point(92, 208);
             this.txtArea.Name = "txtArea";
+            this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(100, 22);
             this.txtArea.TabIndex = 9;
+            // 
+            // btnResetear
+            // 
+            this.btnResetear.Location = new System.Drawing.Point(15, 274);
+            this.btnResetear.Name = "btnResetear";
+            this.btnResetear.Size = new System.Drawing.Size(75, 23);
+            this.btnResetear.TabIndex = 10;
+            this.btnResetear.Text = "Resetear";
+            this.btnResetear.UseVisualStyleBackColor = true;
+            this.btnResetear.Click += new System.EventHandler(this.btnResetear_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(117, 274);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.Location = new System.Drawing.Point(15, 317);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(270, 103);
+            this.lblMensaje.TabIndex = 12;
             // 
             // FrmHexagono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnResetear);
             this.Controls.Add(this.txtArea);
             this.Controls.Add(this.txtPerimetro);
             this.Controls.Add(this.lblArea);
@@ -159,5 +194,8 @@
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.TextBox txtPerimetro;
         private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.Button btnResetear;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }
