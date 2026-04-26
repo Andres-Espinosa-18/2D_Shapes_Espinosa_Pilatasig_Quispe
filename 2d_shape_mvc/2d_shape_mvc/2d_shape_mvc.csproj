@@ -47,15 +47,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ec\edu\espe\controlador\FiguraControlador.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorCruz.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorHexagono.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorMediaLuna.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorRectangulo.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorSemicirculo.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorTrebol.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorTriangulo.cs" />
     <Compile Include="ec\edu\espe\dibujador\IDibujador.cs" />
+    <Compile Include="ec\edu\espe\modelo\Cruz.cs" />
     <Compile Include="ec\edu\espe\modelo\Hexagono.cs" />
     <Compile Include="ec\edu\espe\modelo\IFigura.cs" />
+    <Compile Include="ec\edu\espe\modelo\MediaLuna.cs" />
     <Compile Include="ec\edu\espe\modelo\Rectangulo.cs" />
+    <Compile Include="ec\edu\espe\modelo\Semicirculo.cs" />
+    <Compile Include="ec\edu\espe\modelo\Trebol.cs" />
     <Compile Include="ec\edu\espe\modelo\Triangulo.cs" />
     <Compile Include="ec\edu\espe\utils\Validacion.cs" />
+    <Compile Include="ec\edu\espe\vista\FrmCreciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCreciente.Designer.cs">
+      <DependentUpon>FrmCreciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCruz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCruz.Designer.cs">
+      <DependentUpon>FrmCruz.cs</DependentUpon>
+    </Compile>
     <Compile Include="ec\edu\espe\vista\FrmHexagono.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +94,18 @@
     <Compile Include="ec\edu\espe\vista\FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmSemicirculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmSemicirculo.Designer.cs">
+      <DependentUpon>FrmSemicirculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmTrebol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmTrebol.Designer.cs">
+      <DependentUpon>FrmTrebol.cs</DependentUpon>
+    </Compile>
     <Compile Include="ec\edu\espe\vista\FrmTriangle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +114,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmCreciente.resx">
+      <DependentUpon>FrmCreciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmCruz.resx">
+      <DependentUpon>FrmCruz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmHexagono.resx">
       <DependentUpon>FrmHexagono.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmRectangle.resx">
       <DependentUpon>FrmRectangle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmSemicirculo.resx">
+      <DependentUpon>FrmSemicirculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmTrebol.resx">
+      <DependentUpon>FrmTrebol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmTriangle.resx">
       <DependentUpon>FrmTriangle.cs</DependentUpon>

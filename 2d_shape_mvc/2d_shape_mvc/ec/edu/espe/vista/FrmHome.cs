@@ -37,5 +37,38 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             frmHexagono.MdiParent = this;
             frmHexagono.Show();
         }
+
+        private void miTrebolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTrebol frmTrebol = new FrmTrebol();
+            frmTrebol.MdiParent = this;
+            frmTrebol.Show();
+        }
+
+        private void miCrecienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCreciente frmCreciente = new FrmCreciente();
+            frmCreciente.MdiParent = this;
+            frmCreciente.Show();
+        }
+
+        private void miCruzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCruz frmCruz = new FrmCruz();
+            frmCruz.MdiParent = this;
+            frmCruz.Show();
+        }
+
+        private void miSemicirculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSemicirculo frmSemicirculo = new FrmSemicirculo();
+            frmSemicirculo.MdiParent = this;
+            frmSemicirculo.Show();
+        }
+
+        private void shapeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

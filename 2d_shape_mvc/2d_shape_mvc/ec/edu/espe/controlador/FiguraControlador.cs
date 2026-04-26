@@ -12,10 +12,10 @@ namespace _2d_shape_mvc.ec.edu.espe.controlador
     {
         private IFigura figura;
 
-        public (IFigura rectangulo,double perimetro, double area) calcularRectangulo(double largo, double ancho)
+        public (IFigura rectangulo, double perimetro, double area) calcularRectangulo(double largo, double ancho)
         {
             figura = new Rectangulo(largo, ancho);
-            return (figura,figura.calcularPerimetro(), figura.calcularArea());
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
         }
 
         public (IFigura triangulo, double perimetro, double area) calcularTriangulo(double l1, double l2, double l3)
@@ -24,10 +24,34 @@ namespace _2d_shape_mvc.ec.edu.espe.controlador
             return (figura, figura.calcularPerimetro(), figura.calcularArea());
         }
 
-        public (IFigura hexagono,  double perimetro, double area) calcularHexagono(double lado)
+        public (IFigura hexagono, double perimetro, double area) calcularHexagono(double lado)
         {
-            figura=new Hexagono(lado);
-            return(figura, figura.calcularPerimetro(),figura.calcularArea());
+            figura = new Hexagono(lado);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura semicirculo, double perimetro, double area) calcularSemicirculo(double radio)
+        {
+            figura = new Semicirculo(radio);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura cruz, double perimetro, double area) calcularCruz(double lado)
+        {
+            figura = new Cruz(lado);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura medialuna, double perimetro, double area) calcularMediaLuna(double radio)
+        {
+            figura = new MediaLuna(radio);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura trebol, double perimetro, double area) calcularTrebol(double radioHoja)
+        {
+            figura = new Trebol(radioHoja);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
         }
     }
 }
