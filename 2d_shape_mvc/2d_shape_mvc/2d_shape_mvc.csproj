@@ -49,6 +49,7 @@
     <Compile Include="ec\edu\espe\controlador\FiguraControlador.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorCruz.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorElipse.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorEstrella.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorHexagono.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorMediaLuna.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorRectangulo.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="ec\edu\espe\dibujador\IDibujador.cs" />
     <Compile Include="ec\edu\espe\modelo\Cruz.cs" />
     <Compile Include="ec\edu\espe\modelo\Elipse.cs" />
+    <Compile Include="ec\edu\espe\modelo\Estrella.cs" />
     <Compile Include="ec\edu\espe\modelo\Hexagono.cs" />
     <Compile Include="ec\edu\espe\modelo\IFigura.cs" />
     <Compile Include="ec\edu\espe\modelo\MediaLuna.cs" />
@@ -95,6 +97,12 @@
     </Compile>
     <Compile Include="ec\edu\espe\vista\FrmElipse.Designer.cs">
       <DependentUpon>FrmElipse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmEstrella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmEstrella.Designer.cs">
+      <DependentUpon>FrmEstrella.cs</DependentUpon>
     </Compile>
     <Compile Include="ec\edu\espe\vista\FrmHexagono.cs">
       <SubType>Form</SubType>
@@ -148,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmElipse.resx">
       <DependentUpon>FrmElipse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmEstrella.resx">
+      <DependentUpon>FrmEstrella.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmHexagono.resx">
       <DependentUpon>FrmHexagono.cs</DependentUpon>

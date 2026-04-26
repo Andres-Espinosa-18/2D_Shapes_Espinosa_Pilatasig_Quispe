@@ -32,5 +32,29 @@ namespace _2d_shape_mvc.ec.edu.espe.utils
                 return false;
             return true;
         }
+
+        public static void ValidarEstrella(int numPuntas, double radioExterior, double radioInterior)
+        {
+            if (numPuntas < 5)
+                throw new ArgumentException("La estrella debe tener al menos 5 puntas.");
+
+            if (radioExterior <= 0)
+                throw new ArgumentException("El radio exterior debe ser mayor que cero.");
+
+            if (radioInterior <= 0)
+                throw new ArgumentException("El radio interior debe ser mayor que cero.");
+
+            if (radioInterior >= radioExterior)
+                throw new ArgumentException("El radio interior debe ser menor que el radio exterior.");
+        }
+
+        public bool validarEstrellaFrm(int numPuntas, double radioExterior, double radioInterior)
+        {
+            if (numPuntas < 5)
+                return false;
+            if (radioInterior >= radioExterior)
+                return false;
+            return true;
+        }
     }
 }

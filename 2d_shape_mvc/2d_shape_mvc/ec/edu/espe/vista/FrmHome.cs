@@ -86,5 +86,12 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             frmCirculo.MdiParent = this;
             frmCirculo.Show();
         }
+
+        private void estrellaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstrella frmEstrella = new FrmEstrella();
+            frmEstrella.MdiParent = this;
+            frmEstrella.Show();
+        }
     }
 }
