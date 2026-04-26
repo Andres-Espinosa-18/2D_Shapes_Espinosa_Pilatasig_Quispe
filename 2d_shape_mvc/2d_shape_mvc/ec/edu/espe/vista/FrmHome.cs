@@ -66,9 +66,25 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             frmSemicirculo.Show();
         }
 
-        private void shapeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cuadradoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmCuadraro frmCuadrado = new FrmCuadraro();
+            frmCuadrado.MdiParent = this;
+            frmCuadrado.Show();
+        }
 
+        private void elipseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmElipse frmEllipse = new FrmElipse();
+            frmEllipse.MdiParent = this;
+            frmEllipse.Show();
+        }
+
+        private void circuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCirculo frmCirculo = new FrmCirculo();
+            frmCirculo.MdiParent = this;
+            frmCirculo.Show();
         }
     }
 }

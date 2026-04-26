@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ec\edu\espe\controlador\FiguraControlador.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorCruz.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorElipse.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorHexagono.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorMediaLuna.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorRectangulo.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="ec\edu\espe\dibujador\DibujadorTriangulo.cs" />
     <Compile Include="ec\edu\espe\dibujador\IDibujador.cs" />
     <Compile Include="ec\edu\espe\modelo\Cruz.cs" />
+    <Compile Include="ec\edu\espe\modelo\Elipse.cs" />
     <Compile Include="ec\edu\espe\modelo\Hexagono.cs" />
     <Compile Include="ec\edu\espe\modelo\IFigura.cs" />
     <Compile Include="ec\edu\espe\modelo\MediaLuna.cs" />
@@ -75,6 +77,24 @@
     </Compile>
     <Compile Include="ec\edu\espe\vista\FrmCruz.Designer.cs">
       <DependentUpon>FrmCruz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCirculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCirculo.Designer.cs">
+      <DependentUpon>FrmCirculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCuadraro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCuadraro.Designer.cs">
+      <DependentUpon>FrmCuadraro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmElipse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmElipse.Designer.cs">
+      <DependentUpon>FrmElipse.cs</DependentUpon>
     </Compile>
     <Compile Include="ec\edu\espe\vista\FrmHexagono.cs">
       <SubType>Form</SubType>
@@ -119,6 +139,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmCruz.resx">
       <DependentUpon>FrmCruz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmCirculo.resx">
+      <DependentUpon>FrmCirculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmCuadraro.resx">
+      <DependentUpon>FrmCuadraro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmElipse.resx">
+      <DependentUpon>FrmElipse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmHexagono.resx">
       <DependentUpon>FrmHexagono.cs</DependentUpon>

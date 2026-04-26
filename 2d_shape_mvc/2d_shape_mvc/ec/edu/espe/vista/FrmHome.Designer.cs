@@ -37,6 +37,9 @@
             this.miCrecienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miCruzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miSemicirculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elipseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,11 +64,13 @@
             this.miTrebolToolStripMenuItem,
             this.miCrecienteToolStripMenuItem,
             this.miCruzToolStripMenuItem,
-            this.miSemicirculoToolStripMenuItem});
+            this.miSemicirculoToolStripMenuItem,
+            this.cuadradoToolStripMenuItem,
+            this.elipseToolStripMenuItem,
+            this.circuloToolStripMenuItem});
             this.shapeToolStripMenuItem.Name = "shapeToolStripMenuItem";
             this.shapeToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.shapeToolStripMenuItem.Text = "Shapes";
-            this.shapeToolStripMenuItem.Click += new System.EventHandler(this.shapeToolStripMenuItem_Click);
             // 
             // miRectanguloToolStripMenuItem
             // 
@@ -116,6 +121,27 @@
             this.miSemicirculoToolStripMenuItem.Text = "Semicirculo";
             this.miSemicirculoToolStripMenuItem.Click += new System.EventHandler(this.miSemicirculoToolStripMenuItem_Click);
             // 
+            // cuadradoToolStripMenuItem
+            // 
+            this.cuadradoToolStripMenuItem.Name = "cuadradoToolStripMenuItem";
+            this.cuadradoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cuadradoToolStripMenuItem.Text = "Cuadrado";
+            this.cuadradoToolStripMenuItem.Click += new System.EventHandler(this.cuadradoToolStripMenuItem_Click);
+            // 
+            // elipseToolStripMenuItem
+            // 
+            this.elipseToolStripMenuItem.Name = "elipseToolStripMenuItem";
+            this.elipseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.elipseToolStripMenuItem.Text = "Elipse";
+            this.elipseToolStripMenuItem.Click += new System.EventHandler(this.elipseToolStripMenuItem_Click);
+            // 
+            // circuloToolStripMenuItem
+            // 
+            this.circuloToolStripMenuItem.Name = "circuloToolStripMenuItem";
+            this.circuloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuloToolStripMenuItem.Text = "Circulo";
+            this.circuloToolStripMenuItem.Click += new System.EventHandler(this.circuloToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,5 +171,8 @@
         private System.Windows.Forms.ToolStripMenuItem miCrecienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miCruzToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miSemicirculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuadradoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem elipseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem circuloToolStripMenuItem;
     }
 }

@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
-    public partial class FrmHexagono : Form
+    public partial class FrmCirculo : Form
     {
         private Validacion v;
         private FiguraControlador controlador;
         private IDibujador dibujador;
-        public FrmHexagono()
+        public FrmCirculo()
         {
             InitializeComponent();
             this.v = new Validacion();
@@ -27,7 +27,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
 
         private void limpiarFormulario()
         {
-            txtLongitud.Clear();
+            txtRadio.Clear();
             txtPerimetro.Clear();
             txtArea.Clear();
             lblMensaje.Text = "";
@@ -38,35 +38,42 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            if (v.isEmpty(txtLongitud.Text)){
-                lblMensaje.Text = "La entrada no puede estar vacia. Ingrese un número";
+            if (v.isEmpty(txtRadio.Text)){
+                lblMensaje.Text = "La entrada no debe estar vacia. Ingrese un número";
                 return;
             }
 
-            if (!v.isNumbers(txtLongitud.Text))
-            {
-                lblMensaje.Text = "La entrada debe ser numérica. Ingrese un número";
+            if (!v.isNumbers(txtRadio.Text)) {
+                lblMensaje.Text = "La entrada debe ser numérica. Ingrese un número.";
                 return;
             }
 
-            double lado;
-            lado = double.Parse(txtLongitud.Text.Trim());
+            double radio=double.Parse(txtRadio.Text);
 
-            if (!v.isPositive(lado))
+            if (!v.isPositive(radio))
             {
-                lblMensaje.Text = "La entrada debe ser positiva. Ingrese un número válido";
+                lblMensaje.Text = "La entrada debe ser mayor que 0. Ingrese un número válido";
                 return;
             }
 
             lblMensaje.Text = "";
 
-            var resultado=controlador.calcularHexagono(lado);
-            dibujador = resultado.hexagono.crearDibujador();
+            var resultado = controlador.calcularElipse(radio * 2, radio * 2);
+            dibujador = resultado.elipse.crearDibujador();
 
             txtPerimetro.Text = resultado.perimetro.ToString("F2");
-            txtArea.Text=resultado.area.ToString("F2");
-
+            txtArea.Text = resultado.area.ToString("F2");
             panelDibujo.Invalidate();
+        }
+
+        private void btnResetear_Click(object sender, EventArgs e)
+        {
+            limpiarFormulario();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void panelDibujo_Paint(object sender, PaintEventArgs e)
@@ -75,16 +82,6 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             if (dibujador == null) return;
 
             dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnResetear_Click(object sender, EventArgs e)
-        {
-            limpiarFormulario();
         }
     }
 }
