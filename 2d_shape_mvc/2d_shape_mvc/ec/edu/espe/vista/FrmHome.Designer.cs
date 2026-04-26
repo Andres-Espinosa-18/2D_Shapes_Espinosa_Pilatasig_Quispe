@@ -34,6 +34,8 @@
             this.miTrianguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hexagonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.elipseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +56,9 @@
             this.miRectanguloToolStripMenuItem,
             this.miTrianguloToolStripMenuItem,
             this.hexagonoToolStripMenuItem,
-            this.cuadradoToolStripMenuItem});
+            this.cuadradoToolStripMenuItem,
+            this.elipseToolStripMenuItem,
+            this.circuloToolStripMenuItem});
             this.shapeToolStripMenuItem.Name = "shapeToolStripMenuItem";
             this.shapeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.shapeToolStripMenuItem.Text = "Shape";
@@ -87,6 +91,20 @@
             this.cuadradoToolStripMenuItem.Text = "Cuadrado";
             this.cuadradoToolStripMenuItem.Click += new System.EventHandler(this.cuadradoToolStripMenuItem_Click);
             // 
+            // elipseToolStripMenuItem
+            // 
+            this.elipseToolStripMenuItem.Name = "elipseToolStripMenuItem";
+            this.elipseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.elipseToolStripMenuItem.Text = "Elipse";
+            this.elipseToolStripMenuItem.Click += new System.EventHandler(this.elipseToolStripMenuItem_Click);
+            // 
+            // circuloToolStripMenuItem
+            // 
+            this.circuloToolStripMenuItem.Name = "circuloToolStripMenuItem";
+            this.circuloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuloToolStripMenuItem.Text = "Circulo";
+            this.circuloToolStripMenuItem.Click += new System.EventHandler(this.circuloToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,5 +130,7 @@
         private System.Windows.Forms.ToolStripMenuItem miTrianguloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hexagonoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuadradoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem elipseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem circuloToolStripMenuItem;
     }
 }

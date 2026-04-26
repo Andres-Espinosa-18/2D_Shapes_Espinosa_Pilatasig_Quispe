@@ -26,8 +26,14 @@ namespace _2d_shape_mvc.ec.edu.espe.controlador
 
         public (IFigura hexagono,  double perimetro, double area) calcularHexagono(double lado)
         {
-            figura=new Hexagono(lado);
+            figura = new Hexagono(lado);
             return(figura, figura.calcularPerimetro(),figura.calcularArea());
+        }
+
+        public(IFigura elipse, double perimetro, double area) calcularElipse(double ancho, double alto)
+        {
+            figura = new Elipse(ancho, alto);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
         }
     }
 }
