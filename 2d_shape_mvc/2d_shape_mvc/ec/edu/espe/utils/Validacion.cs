@@ -56,5 +56,24 @@ namespace _2d_shape_mvc.ec.edu.espe.utils
                 return false;
             return true;
         }
+
+        public bool validarAngulo(double angulo)
+        {
+            if (angulo <= 0 || angulo >= 180)
+                return false;
+            return true;
+        }
+
+        public bool validarTrianguloEscaleno(double lado1, double lado2, double lado3)
+        {
+            if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
+                return false;
+            return true;
+        }
+
+        public bool validarBaseMayor(double baseMayor, double baseMenor)
+        {
+            return baseMayor > baseMenor;
+        }
     }
 }
