@@ -37,8 +37,7 @@ namespace _2d_shape_mvc.ec.edu.espe.modelo
 
         public IDibujador crearDibujador()
         {
-            return new DibujadorTriangulo(this);
+            return new DibujadorCometa(this);
         }
     }
-}
 }

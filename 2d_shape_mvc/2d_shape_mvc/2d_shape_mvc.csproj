@@ -48,13 +48,16 @@
   <ItemGroup>
     <Compile Include="ec\edu\espe\controlador\FiguraControlador.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorCometa.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorCorazon.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorCruz.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorElipse.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorEstrella.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorHexagono.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorMediaLuna.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorOctagono.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorParalelogramo.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorPentagono.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorPie.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorRectangulo.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorSemicirculo.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorTrapecio.cs" />
@@ -62,20 +65,35 @@
     <Compile Include="ec\edu\espe\dibujador\DibujadorTriangulo.cs" />
     <Compile Include="ec\edu\espe\dibujador\IDibujador.cs" />
     <Compile Include="ec\edu\espe\modelo\Cometa.cs" />
+    <Compile Include="ec\edu\espe\modelo\Corazon.cs" />
     <Compile Include="ec\edu\espe\modelo\Cruz.cs" />
     <Compile Include="ec\edu\espe\modelo\Elipse.cs" />
     <Compile Include="ec\edu\espe\modelo\Estrella.cs" />
     <Compile Include="ec\edu\espe\modelo\Hexagono.cs" />
     <Compile Include="ec\edu\espe\modelo\IFigura.cs" />
     <Compile Include="ec\edu\espe\modelo\MediaLuna.cs" />
+    <Compile Include="ec\edu\espe\modelo\Octagono.cs" />
     <Compile Include="ec\edu\espe\modelo\Paralelogramo.cs" />
     <Compile Include="ec\edu\espe\modelo\Pentagono.cs" />
+    <Compile Include="ec\edu\espe\modelo\Pie.cs" />
     <Compile Include="ec\edu\espe\modelo\Rectangulo.cs" />
     <Compile Include="ec\edu\espe\modelo\Semicirculo.cs" />
     <Compile Include="ec\edu\espe\modelo\Trapecio.cs" />
     <Compile Include="ec\edu\espe\modelo\Trebol.cs" />
     <Compile Include="ec\edu\espe\modelo\Triangulo.cs" />
     <Compile Include="ec\edu\espe\utils\Validacion.cs" />
+    <Compile Include="ec\edu\espe\vista\FrmCometa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCometa.Designer.cs">
+      <DependentUpon>FrmCometa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCorazon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmCorazon.Designer.cs">
+      <DependentUpon>FrmCorazon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ec\edu\espe\vista\FrmCreciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +142,12 @@
     <Compile Include="ec\edu\espe\vista\FrmHexagono.Designer.cs">
       <DependentUpon>FrmHexagono.cs</DependentUpon>
     </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmOctagono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmOctagono.Designer.cs">
+      <DependentUpon>FrmOctagono.cs</DependentUpon>
+    </Compile>
     <Compile Include="ec\edu\espe\vista\FrmParalelogramo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +159,12 @@
     </Compile>
     <Compile Include="ec\edu\espe\vista\FrmPentagono.Designer.cs">
       <DependentUpon>FrmPentagono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmPie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\FrmPie.Designer.cs">
+      <DependentUpon>FrmPie.cs</DependentUpon>
     </Compile>
     <Compile Include="ec\edu\espe\vista\FrmRectangle.cs">
       <SubType>Form</SubType>
@@ -172,8 +202,20 @@
     <Compile Include="ec\edu\espe\vista\FrmTriangle.Designer.cs">
       <DependentUpon>FrmTriangle.cs</DependentUpon>
     </Compile>
+    <Compile Include="ec\edu\espe\vista\Rombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec\edu\espe\vista\Rombo.Designer.cs">
+      <DependentUpon>Rombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmCometa.resx">
+      <DependentUpon>FrmCometa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmCorazon.resx">
+      <DependentUpon>FrmCorazon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmCreciente.resx">
       <DependentUpon>FrmCreciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,11 +243,17 @@
     <EmbeddedResource Include="ec\edu\espe\vista\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmOctagono.resx">
+      <DependentUpon>FrmOctagono.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmParalelogramo.resx">
       <DependentUpon>FrmParalelogramo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmPentagono.resx">
       <DependentUpon>FrmPentagono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\FrmPie.resx">
+      <DependentUpon>FrmPie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmRectangle.resx">
       <DependentUpon>FrmRectangle.cs</DependentUpon>
@@ -221,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ec\edu\espe\vista\FrmTriangle.resx">
       <DependentUpon>FrmTriangle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ec\edu\espe\vista\Rombo.resx">
+      <DependentUpon>Rombo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

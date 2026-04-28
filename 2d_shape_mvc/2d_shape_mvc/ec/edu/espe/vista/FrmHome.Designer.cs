@@ -45,6 +45,11 @@
             this.paralelogramoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trianguloEscalenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trapecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cometaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.octagonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.corazonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.romboToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +61,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(922, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,7 +82,12 @@
             this.pentagonoToolStripMenuItem,
             this.paralelogramoToolStripMenuItem,
             this.trianguloEscalenoToolStripMenuItem,
-            this.trapecioToolStripMenuItem});
+            this.trapecioToolStripMenuItem,
+            this.cometaToolStripMenuItem,
+            this.octagonoToolStripMenuItem,
+            this.pieToolStripMenuItem,
+            this.corazonToolStripMenuItem,
+            this.romboToolStripMenuItem});
             this.shapeToolStripMenuItem.Name = "shapeToolStripMenuItem";
             this.shapeToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.shapeToolStripMenuItem.Text = "Shapes";
@@ -187,11 +197,46 @@
             this.trapecioToolStripMenuItem.Text = "Trapecio";
             this.trapecioToolStripMenuItem.Click += new System.EventHandler(this.trapecioToolStripMenuItem_Click);
             // 
+            // cometaToolStripMenuItem
+            // 
+            this.cometaToolStripMenuItem.Name = "cometaToolStripMenuItem";
+            this.cometaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cometaToolStripMenuItem.Text = "Cometa";
+            this.cometaToolStripMenuItem.Click += new System.EventHandler(this.cometaToolStripMenuItem_Click);
+            // 
+            // octagonoToolStripMenuItem
+            // 
+            this.octagonoToolStripMenuItem.Name = "octagonoToolStripMenuItem";
+            this.octagonoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.octagonoToolStripMenuItem.Text = "Octagono";
+            this.octagonoToolStripMenuItem.Click += new System.EventHandler(this.octagonoToolStripMenuItem_Click);
+            // 
+            // pieToolStripMenuItem
+            // 
+            this.pieToolStripMenuItem.Name = "pieToolStripMenuItem";
+            this.pieToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pieToolStripMenuItem.Text = "Pie";
+            this.pieToolStripMenuItem.Click += new System.EventHandler(this.pieToolStripMenuItem_Click);
+            // 
+            // corazonToolStripMenuItem
+            // 
+            this.corazonToolStripMenuItem.Name = "corazonToolStripMenuItem";
+            this.corazonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.corazonToolStripMenuItem.Text = "Corazon";
+            this.corazonToolStripMenuItem.Click += new System.EventHandler(this.corazonToolStripMenuItem_Click);
+            // 
+            // romboToolStripMenuItem
+            // 
+            this.romboToolStripMenuItem.Name = "romboToolStripMenuItem";
+            this.romboToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.romboToolStripMenuItem.Text = "Rombo";
+            this.romboToolStripMenuItem.Click += new System.EventHandler(this.romboToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(922, 537);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -224,5 +269,10 @@
         private System.Windows.Forms.ToolStripMenuItem paralelogramoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trianguloEscalenoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trapecioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cometaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem octagonoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem corazonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem romboToolStripMenuItem;
     }
 }

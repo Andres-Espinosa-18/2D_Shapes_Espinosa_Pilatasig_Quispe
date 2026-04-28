@@ -121,5 +121,40 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             frmTrapecio.MdiParent = this;
             frmTrapecio.Show();
         }
+
+        private void cometaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCometa frmCometa = new FrmCometa();
+            frmCometa.MdiParent = this;
+            frmCometa.Show();
+        }
+
+        private void octagonoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOctagono frmOctagono = new FrmOctagono();
+            frmOctagono.MdiParent = this;
+            frmOctagono.Show();
+        }
+
+        private void pieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPie frmPie = new FrmPie();
+            frmPie.MdiParent = this;
+            frmPie.Show();
+        }
+
+        private void corazonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCorazon frmCorazon = new FrmCorazon();
+            frmCorazon.MdiParent = this;
+            frmCorazon.Show();
+        }
+
+        private void romboToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRombo frmRombo = new FrmRombo();
+            frmRombo.MdiParent = this;
+            frmRombo.Show();
+        }
     }
 }

@@ -18,6 +18,30 @@ namespace _2d_shape_mvc.ec.edu.espe.controlador
             return (figura, figura.calcularPerimetro(), figura.calcularArea());
         }
 
+        public (IFigura cometa, double perimetro, double area) calcularCometa(double diagonal1, double diagonal2, double interseccion)
+        {
+            figura = new Cometa(diagonal1, diagonal2, interseccion);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura octagono, double perimetro, double area) calcularOctagono(double lado)
+        {
+            figura = new Octagono(lado);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura pie, double perimetro, double area) calcularPie(double radio, double anguloInicio, double anguloFin)
+        {
+            figura = new Pie(radio, anguloInicio, anguloFin);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
+        public (IFigura corazon, double perimetro, double area) calcularCorazon(double tamanio)
+        {
+            figura = new Corazon(tamanio);
+            return (figura, figura.calcularPerimetro(), figura.calcularArea());
+        }
+
         public (IFigura triangulo, double perimetro, double area) calcularTriangulo(double l1, double l2, double l3)
         {
             figura = new Triangulo(l1, l2, l3);

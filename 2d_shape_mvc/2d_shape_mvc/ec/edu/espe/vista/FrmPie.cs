@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using _2d_shape_mvc.ec.edu.espe.controlador;
+using _2d_shape_mvc.ec.edu.espe.dibujador;
+using _2d_shape_mvc.ec.edu.espe.utils;
+
+namespace _2d_shape_mvc.ec.edu.espe.vista
+{
+    public partial class FrmPie : Form
+    {
+        private Validacion v;
+        private FiguraControlador controlador;
+        private IDibujador dibujador;
+        public FrmPie()
+        {
+            InitializeComponent();
+            this.v = new Validacion();
+            this.controlador = new FiguraControlador();
+        }
+        private void limpiarFormulario()
+        {
+            txtRadio.Clear();
+            txtAnguloInicio.Clear();
+            txtAnguloFin.Clear();
+            txtPerimetro.Clear();
+            txtArea.Clear();
+            lblMensaje.Text = "";
+
+            dibujador = null;
+            panelDibujo.Invalidate();
+        }
+
+        private void lblRadio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            if (v.isEmpty(txtRadio.Text) || v.isEmpty(txtAnguloInicio.Text) || v.isEmpty(txtAnguloFin.Text))
+            {
+                lblMensaje.Text = "La entrada no debe estar vacia. Ingrese un número";
+                return;
+            }
+
+            if (!v.isNumbers(txtRadio.Text) || !v.isNumbers(txtAnguloInicio.Text) || !v.isNumbers(txtAnguloFin.Text))
+            {
+                lblMensaje.Text = "La entrada debe ser numérica. Ingrese un número.";
+                return;
+            }
+
+            double radio = double.Parse(txtRadio.Text);
+            double anguloInicio = double.Parse(txtAnguloInicio.Text);
+            double anguloFin = double.Parse(txtAnguloFin.Text);
+
+            if (!v.isPositive(radio) || anguloInicio < 0 || anguloFin < 0)
+            {
+                lblMensaje.Text = "La entrada debe ser mayor que 0. Ingrese un número válido";
+                return;
+            }
+
+            lblMensaje.Text = "";
+
+            var resultado = controlador.calcularPie(radio, anguloInicio, anguloFin);
+            dibujador = resultado.pie.crearDibujador();
+
+            txtPerimetro.Text = resultado.perimetro.ToString("F2");
+            txtArea.Text = resultado.area.ToString("F2");
+            panelDibujo.Invalidate();
+        }
+
+        private void btnResetear_Click(object sender, EventArgs e)
+        {
+            limpiarFormulario();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelDibujo_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.Clear(Color.White);
+            if (dibujador == null) return;
+
+            dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
+        }
+    }
+}
