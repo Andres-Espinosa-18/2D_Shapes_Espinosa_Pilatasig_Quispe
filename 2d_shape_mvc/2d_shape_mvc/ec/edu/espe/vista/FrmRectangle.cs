@@ -84,5 +84,10 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         {
             this.Close();
         }
+
+        private void FrmRectangle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

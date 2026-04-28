@@ -177,6 +177,7 @@
             this.Controls.Add(this.lblEntrada);
             this.Name = "FrmCirculo";
             this.Text = "FrmCirculo";
+            this.Load += new System.EventHandler(this.FrmCirculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

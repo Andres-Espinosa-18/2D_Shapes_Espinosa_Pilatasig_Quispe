@@ -83,5 +83,10 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
 
             dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
         }
+
+        private void FrmCirculo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

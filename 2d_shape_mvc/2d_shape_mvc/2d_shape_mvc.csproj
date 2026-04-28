@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ec\edu\espe\controlador\FiguraControlador.cs" />
+    <Compile Include="ec\edu\espe\dibujador\DibujadorCometa.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorCruz.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorElipse.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorHexagono.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="ec\edu\espe\dibujador\DibujadorTrebol.cs" />
     <Compile Include="ec\edu\espe\dibujador\DibujadorTriangulo.cs" />
     <Compile Include="ec\edu\espe\dibujador\IDibujador.cs" />
+    <Compile Include="ec\edu\espe\modelo\Cometa.cs" />
     <Compile Include="ec\edu\espe\modelo\Cruz.cs" />
     <Compile Include="ec\edu\espe\modelo\Elipse.cs" />
     <Compile Include="ec\edu\espe\modelo\Hexagono.cs" />

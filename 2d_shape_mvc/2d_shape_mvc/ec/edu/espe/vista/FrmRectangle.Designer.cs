@@ -209,6 +209,7 @@
             this.Controls.Add(this.lblEntrada);
             this.Name = "FrmRectangle";
             this.Text = "Rectangle";
+            this.Load += new System.EventHandler(this.FrmRectangle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
