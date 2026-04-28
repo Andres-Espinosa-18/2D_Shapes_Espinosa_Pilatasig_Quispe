@@ -86,5 +86,40 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             frmCirculo.MdiParent = this;
             frmCirculo.Show();
         }
+
+        private void estrellaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstrella frmEstrella = new FrmEstrella();
+            frmEstrella.MdiParent = this;
+            frmEstrella.Show();
+        }
+
+        private void pentagonoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPentagono frmPentagono = new FrmPentagono();
+            frmPentagono.MdiParent = this;
+            frmPentagono.Show();
+        }
+
+        private void paralelogramoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmParalelogramo frmParalelogramo = new FrmParalelogramo();
+            frmParalelogramo.MdiParent = this;
+            frmParalelogramo.Show();
+        }
+
+        private void trianguloEscalenoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEscaleneTriangle frmEscaleneTriangle = new FrmEscaleneTriangle();
+            frmEscaleneTriangle.MdiParent = this;
+            frmEscaleneTriangle.Show();
+        }
+
+        private void trapecioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTrapecio frmTrapecio = new FrmTrapecio();
+            frmTrapecio.MdiParent = this;
+            frmTrapecio.Show();
+        }
     }
 }

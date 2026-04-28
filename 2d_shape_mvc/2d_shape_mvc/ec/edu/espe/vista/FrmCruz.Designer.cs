@@ -46,42 +46,48 @@
             // lblEntrada
             // 
             this.lblEntrada.AutoSize = true;
-            this.lblEntrada.Location = new System.Drawing.Point(13, 13);
+            this.lblEntrada.Location = new System.Drawing.Point(17, 16);
+            this.lblEntrada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEntrada.Name = "lblEntrada";
-            this.lblEntrada.Size = new System.Drawing.Size(53, 15);
+            this.lblEntrada.Size = new System.Drawing.Size(57, 16);
             this.lblEntrada.TabIndex = 0;
             this.lblEntrada.Text = "Entrada:";
             // 
             // lblLado
             // 
             this.lblLado.AutoSize = true;
-            this.lblLado.Location = new System.Drawing.Point(36, 45);
+            this.lblLado.Location = new System.Drawing.Point(48, 55);
+            this.lblLado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLado.Name = "lblLado";
-            this.lblLado.Size = new System.Drawing.Size(38, 15);
+            this.lblLado.Size = new System.Drawing.Size(41, 16);
             this.lblLado.TabIndex = 1;
             this.lblLado.Text = "Lado:";
             // 
             // txtLado
             // 
-            this.txtLado.Location = new System.Drawing.Point(95, 45);
+            this.txtLado.Location = new System.Drawing.Point(127, 55);
+            this.txtLado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLado.Name = "txtLado";
-            this.txtLado.Size = new System.Drawing.Size(65, 20);
+            this.txtLado.Size = new System.Drawing.Size(85, 22);
             this.txtLado.TabIndex = 2;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(179, 43);
+            this.btnCalcular.Location = new System.Drawing.Point(239, 53);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(100, 28);
             this.btnCalcular.TabIndex = 3;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click_1);
             // 
             // btnRestaurar
             // 
-            this.btnRestaurar.Location = new System.Drawing.Point(179, 85);
+            this.btnRestaurar.Location = new System.Drawing.Point(239, 105);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(75, 23);
+            this.btnRestaurar.Size = new System.Drawing.Size(100, 28);
             this.btnRestaurar.TabIndex = 4;
             this.btnRestaurar.Text = "Restaurar";
             this.btnRestaurar.UseVisualStyleBackColor = true;
@@ -89,49 +95,55 @@
             // lblSalida
             // 
             this.lblSalida.AutoSize = true;
-            this.lblSalida.Location = new System.Drawing.Point(271, 13);
+            this.lblSalida.Location = new System.Drawing.Point(361, 16);
+            this.lblSalida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalida.Name = "lblSalida";
-            this.lblSalida.Size = new System.Drawing.Size(45, 15);
+            this.lblSalida.Size = new System.Drawing.Size(49, 16);
             this.lblSalida.TabIndex = 5;
             this.lblSalida.Text = "Salida:";
             // 
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(294, 45);
+            this.lblPerimetro.Location = new System.Drawing.Point(392, 55);
+            this.lblPerimetro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPerimetro.Name = "lblPerimetro";
-            this.lblPerimetro.Size = new System.Drawing.Size(64, 15);
+            this.lblPerimetro.Size = new System.Drawing.Size(68, 16);
             this.lblPerimetro.TabIndex = 6;
             this.lblPerimetro.Text = "Perímetro:";
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(294, 90);
+            this.lblArea.Location = new System.Drawing.Point(392, 111);
+            this.lblArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(35, 15);
+            this.lblArea.Size = new System.Drawing.Size(39, 16);
             this.lblArea.TabIndex = 7;
             this.lblArea.Text = "Área:";
             // 
             // txtPerimetro
             // 
-            this.txtPerimetro.Location = new System.Drawing.Point(369, 45);
+            this.txtPerimetro.Location = new System.Drawing.Point(492, 55);
+            this.txtPerimetro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPerimetro.Name = "txtPerimetro";
-            this.txtPerimetro.Size = new System.Drawing.Size(64, 20);
+            this.txtPerimetro.Size = new System.Drawing.Size(84, 22);
             this.txtPerimetro.TabIndex = 8;
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(369, 90);
+            this.txtArea.Location = new System.Drawing.Point(492, 111);
+            this.txtArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(64, 20);
+            this.txtArea.Size = new System.Drawing.Size(84, 22);
             this.txtArea.TabIndex = 9;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(464, 69);
+            this.btnSalir.Location = new System.Drawing.Point(619, 85);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -139,25 +151,27 @@
             // lblGrafico
             // 
             this.lblGrafico.AutoSize = true;
-            this.lblGrafico.Location = new System.Drawing.Point(16, 164);
+            this.lblGrafico.Location = new System.Drawing.Point(21, 202);
+            this.lblGrafico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGrafico.Name = "lblGrafico";
-            this.lblGrafico.Size = new System.Drawing.Size(49, 15);
+            this.lblGrafico.Size = new System.Drawing.Size(53, 16);
             this.lblGrafico.TabIndex = 11;
             this.lblGrafico.Text = "Gráfico:";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(53, 216);
+            this.panel1.Location = new System.Drawing.Point(71, 266);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(486, 131);
+            this.panel1.Size = new System.Drawing.Size(647, 161);
             this.panel1.TabIndex = 12;
             // 
             // FrmCruz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 376);
+            this.ClientSize = new System.Drawing.Size(776, 463);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblGrafico);
             this.Controls.Add(this.btnSalir);
@@ -171,6 +185,7 @@
             this.Controls.Add(this.txtLado);
             this.Controls.Add(this.lblLado);
             this.Controls.Add(this.lblEntrada);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmCruz";
             this.Text = "FrmCruz";
             this.Load += new System.EventHandler(this.FrmCruz_Load);

@@ -92,5 +92,10 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         {
             this.Close();
         }
+
+        private void btnCalcular_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
