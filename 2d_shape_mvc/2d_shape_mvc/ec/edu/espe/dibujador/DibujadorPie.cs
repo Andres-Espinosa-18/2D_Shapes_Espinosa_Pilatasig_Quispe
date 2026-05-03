@@ -23,9 +23,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             double inicio = pie.anguloInicio;
             double fin = pie.anguloFin;
 
-            double escala = Math.Min((w - 40) / (radio * 2), (h - 40) / (radio * 2));
-
-            float r = (float)(radio * escala);
+            float r = (float)(radio);
             float cx = w / 2f;
             float cy = h / 2f;
 
@@ -37,7 +35,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             g.Clear(Color.White);
 
-            using (SolidBrush brush = new SolidBrush(Color.Tomato))
+            using (SolidBrush brush = new SolidBrush(Color.Gold))
             {
                 g.FillPie(brush, cx - r, cy - r, r * 2, r * 2, (float)inicio, sweepAngle);
             }

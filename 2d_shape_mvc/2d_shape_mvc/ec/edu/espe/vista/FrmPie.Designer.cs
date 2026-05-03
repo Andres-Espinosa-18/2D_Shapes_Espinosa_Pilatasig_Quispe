@@ -45,6 +45,7 @@
             this.lblPerimetro = new System.Windows.Forms.Label();
             this.panelDibujo = new System.Windows.Forms.Panel();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEntradas
@@ -194,11 +195,21 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 20;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(149, 250);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "*Ángulos desde 0  hasta 360";
+            // 
             // FrmPie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1325, 624);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panelDibujo);
             this.Controls.Add(this.txtArea);
@@ -243,5 +254,6 @@
         private System.Windows.Forms.Label lblPerimetro;
         private System.Windows.Forms.Panel panelDibujo;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label label1;
     }
 }

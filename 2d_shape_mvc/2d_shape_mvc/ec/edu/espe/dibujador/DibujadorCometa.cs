@@ -25,9 +25,9 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
 
             double escala = Math.Min((w - 40) / d2, (h - 40) / d1);
 
-            float dw = (float)(d2 * escala);
-            float dh = (float)(d1 * escala);
-            float di = (float)(d1 * it * escala);
+            float dw = (float)(d2);
+            float dh = (float)(d1);
+            float di = (float)(d1 * it);
 
             float cx = w / 2f;
             float cy = h / 2f;

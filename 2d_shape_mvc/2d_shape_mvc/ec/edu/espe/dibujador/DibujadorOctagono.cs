@@ -24,14 +24,12 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             // El octágono regular cabe en un cuadrado de lado: (1 + √2) * lado
             double tamTotal = (1 + Math.Sqrt(2)) * lado;
 
-            double escala = Math.Min((w - 40) / tamTotal, (h - 40) / tamTotal);
-
-            float l = (float)(lado * escala);
+            float l = (float)(lado);
             float cut = (float)(l / Math.Sqrt(2)); // longitud del corte en las esquinas
 
             float cx = w / 2f;
             float cy = h / 2f;
-            float half = (float)(tamTotal * escala / 2f);
+            float half = (float)(tamTotal / 2f);
 
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             g.Clear(Color.White);

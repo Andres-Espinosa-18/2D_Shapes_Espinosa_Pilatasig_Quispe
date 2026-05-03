@@ -77,7 +77,15 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             lblMensaje.Text = "";
 
             var resultado = controlador.calcularCometa(diag2, diag1, inter);
-            dibujador = resultado.cometa.crearDibujador();
+            try
+            { 
+                dibujador = resultado.cometa.crearDibujador();
+            }
+            catch (ArgumentException ex)
+            {
+                lblMensaje.Text = ex.Message;
+                lblNota.Text = "*Para los decímales se usa la coma \",\"";
+            }
 
             txtPerimetro.Text = resultado.perimetro.ToString("F2");
             txtArea.Text = resultado.area.ToString("F2");

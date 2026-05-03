@@ -45,6 +45,7 @@
             this.txtArea = new System.Windows.Forms.TextBox();
             this.panelDibujo = new System.Windows.Forms.Panel();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.lblNota = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEntrada
@@ -196,11 +197,21 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 16;
             // 
+            // lblNota
+            // 
+            this.lblNota.AutoSize = true;
+            this.lblNota.Location = new System.Drawing.Point(125, 248);
+            this.lblNota.Name = "lblNota";
+            this.lblNota.Size = new System.Drawing.Size(113, 16);
+            this.lblNota.TabIndex = 17;
+            this.lblNota.Text = "*Usando coma \",\"";
+            // 
             // FrmCometa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1335, 683);
+            this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panelDibujo);
             this.Controls.Add(this.txtArea);
@@ -245,5 +256,6 @@
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Panel panelDibujo;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label lblNota;
     }
 }

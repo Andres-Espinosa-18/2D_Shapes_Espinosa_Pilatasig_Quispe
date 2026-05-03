@@ -20,7 +20,7 @@ namespace _2d_shape_mvc.ec.edu.espe.modelo
 
         public Cometa(double diagonal1, double diagonal2, double interseccion)
         {
-            if (interseccion < 0 || interseccion > 1) { throw new ArgumentException("La interseccion debe tener valor de 0 a 1"); }
+            if (interseccion < 0 || interseccion > 1) { throw new ArgumentException("La interseccion debe tener valor de 0 a 1. Recuerde usar la coma para annotar decimales"); }
             this.diagonal1 = diagonal1;
             this.diagonal2 = diagonal2;
             this.interseccion = interseccion        ;
