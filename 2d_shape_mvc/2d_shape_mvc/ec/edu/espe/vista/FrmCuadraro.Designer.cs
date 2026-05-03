@@ -46,7 +46,7 @@
             // lblEntrada
             // 
             this.lblEntrada.AutoSize = true;
-            this.lblEntrada.Location = new System.Drawing.Point(13, 13);
+            this.lblEntrada.Location = new System.Drawing.Point(103, 154);
             this.lblEntrada.Name = "lblEntrada";
             this.lblEntrada.Size = new System.Drawing.Size(54, 16);
             this.lblEntrada.TabIndex = 0;
@@ -55,7 +55,7 @@
             // lblLongitud
             // 
             this.lblLongitud.AutoSize = true;
-            this.lblLongitud.Location = new System.Drawing.Point(47, 67);
+            this.lblLongitud.Location = new System.Drawing.Point(171, 192);
             this.lblLongitud.Name = "lblLongitud";
             this.lblLongitud.Size = new System.Drawing.Size(64, 16);
             this.lblLongitud.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // txtLongitud
             // 
-            this.txtLongitud.Location = new System.Drawing.Point(117, 64);
+            this.txtLongitud.Location = new System.Drawing.Point(254, 189);
             this.txtLongitud.Name = "txtLongitud";
             this.txtLongitud.Size = new System.Drawing.Size(100, 22);
             this.txtLongitud.TabIndex = 2;
@@ -71,7 +71,7 @@
             // lblSalida
             // 
             this.lblSalida.AutoSize = true;
-            this.lblSalida.Location = new System.Drawing.Point(283, 13);
+            this.lblSalida.Location = new System.Drawing.Point(103, 247);
             this.lblSalida.Name = "lblSalida";
             this.lblSalida.Size = new System.Drawing.Size(53, 16);
             this.lblSalida.TabIndex = 3;
@@ -80,7 +80,7 @@
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(377, 43);
+            this.lblPerimetro.Location = new System.Drawing.Point(164, 284);
             this.lblPerimetro.Name = "lblPerimetro";
             this.lblPerimetro.Size = new System.Drawing.Size(71, 16);
             this.lblPerimetro.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             // txtPerimetro
             // 
-            this.txtPerimetro.Location = new System.Drawing.Point(454, 40);
+            this.txtPerimetro.Location = new System.Drawing.Point(254, 281);
             this.txtPerimetro.Name = "txtPerimetro";
             this.txtPerimetro.ReadOnly = true;
             this.txtPerimetro.Size = new System.Drawing.Size(100, 22);
@@ -97,7 +97,7 @@
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(406, 78);
+            this.lblArea.Location = new System.Drawing.Point(193, 319);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(42, 16);
             this.lblArea.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(454, 75);
+            this.txtArea.Location = new System.Drawing.Point(254, 316);
             this.txtArea.Name = "txtArea";
             this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(100, 22);
@@ -114,7 +114,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(16, 125);
+            this.lblMensaje.Location = new System.Drawing.Point(103, 379);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 8;
@@ -122,15 +122,15 @@
             // panelDibujo
             // 
             this.panelDibujo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDibujo.Location = new System.Drawing.Point(14, 157);
+            this.panelDibujo.Location = new System.Drawing.Point(572, 78);
             this.panelDibujo.Name = "panelDibujo";
-            this.panelDibujo.Size = new System.Drawing.Size(701, 283);
+            this.panelDibujo.Size = new System.Drawing.Size(525, 447);
             this.panelDibujo.TabIndex = 9;
             this.panelDibujo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDibujo_Paint);
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(286, 39);
+            this.btnCalcular.Location = new System.Drawing.Point(365, 437);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 25);
             this.btnCalcular.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             // btnResetear
             // 
-            this.btnResetear.Location = new System.Drawing.Point(286, 75);
+            this.btnResetear.Location = new System.Drawing.Point(241, 439);
             this.btnResetear.Name = "btnResetear";
             this.btnResetear.Size = new System.Drawing.Size(75, 23);
             this.btnResetear.TabIndex = 11;
@@ -150,7 +150,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(622, 39);
+            this.btnSalir.Location = new System.Drawing.Point(113, 437);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 25);
             this.btnSalir.TabIndex = 12;
@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 450);
+            this.ClientSize = new System.Drawing.Size(1274, 624);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnResetear);
             this.Controls.Add(this.btnCalcular);
@@ -178,6 +178,7 @@
             this.Controls.Add(this.lblEntrada);
             this.Name = "FrmCuadraro";
             this.Text = "Cuadraro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

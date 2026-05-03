@@ -2,6 +2,7 @@
 using _2d_shape_mvc.ec.edu.espe.dibujador;
 using _2d_shape_mvc.ec.edu.espe.modelo;
 using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
 
         public FrmRectangle(){
             InitializeComponent();
+            TemaVisual.Aplicar(this);
             this.v = new Validacion();
             this.controlador = new FiguraControlador();
         }

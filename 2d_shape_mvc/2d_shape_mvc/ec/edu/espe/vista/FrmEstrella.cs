@@ -1,6 +1,7 @@
 ﻿using _2d_shape_mvc.ec.edu.espe.controlador;
 using _2d_shape_mvc.ec.edu.espe.dibujador;
 using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         public FrmEstrella()
         {
             InitializeComponent();
+            TemaVisual.Aplicar(this);
             this.v = new Validacion();
             this.controlador = new FiguraControlador();
         }
@@ -94,6 +96,61 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             if (dibujador == null) return;
 
             dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Width);
+
+        }
+
+        private void txtRadioExterior_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRadioInterior_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRadioInterior_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumPuntas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPuntas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtArea_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPerimetro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPerimetro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -1,6 +1,7 @@
 ﻿using _2d_shape_mvc.ec.edu.espe.controlador;
 using _2d_shape_mvc.ec.edu.espe.dibujador;
 using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         public FrmCreciente()
         {
             InitializeComponent();
+            TemaVisual.Aplicar(this);
 
             controlador = new FiguraControlador();
             validador = new Validacion();

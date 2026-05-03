@@ -1,4 +1,8 @@
-﻿using System;
+﻿using _2d_shape_mvc.ec.edu.espe.controlador;
+using _2d_shape_mvc.ec.edu.espe.dibujador;
+using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _2d_shape_mvc.ec.edu.espe.controlador;
-using _2d_shape_mvc.ec.edu.espe.dibujador;
-using _2d_shape_mvc.ec.edu.espe.utils;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
@@ -21,6 +22,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         public FrmCometa()
         {
             InitializeComponent();
+            TemaVisual.Aplicar(this);
             this.v = new Validacion();
             this.controlador = new FiguraControlador();
         }
@@ -98,6 +100,11 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         private void btnSalida_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPerimetro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

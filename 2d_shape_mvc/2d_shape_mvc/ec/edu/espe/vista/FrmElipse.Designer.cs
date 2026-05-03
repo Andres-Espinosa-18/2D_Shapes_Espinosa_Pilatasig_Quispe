@@ -48,7 +48,7 @@
             // lblEntradas
             // 
             this.lblEntradas.AutoSize = true;
-            this.lblEntradas.Location = new System.Drawing.Point(13, 13);
+            this.lblEntradas.Location = new System.Drawing.Point(72, 141);
             this.lblEntradas.Name = "lblEntradas";
             this.lblEntradas.Size = new System.Drawing.Size(61, 16);
             this.lblEntradas.TabIndex = 0;
@@ -57,7 +57,7 @@
             // lblAlto
             // 
             this.lblAlto.AutoSize = true;
-            this.lblAlto.Location = new System.Drawing.Point(53, 45);
+            this.lblAlto.Location = new System.Drawing.Point(192, 193);
             this.lblAlto.Name = "lblAlto";
             this.lblAlto.Size = new System.Drawing.Size(36, 16);
             this.lblAlto.TabIndex = 1;
@@ -66,7 +66,7 @@
             // lblAncho
             // 
             this.lblAncho.AutoSize = true;
-            this.lblAncho.Location = new System.Drawing.Point(38, 77);
+            this.lblAncho.Location = new System.Drawing.Point(177, 225);
             this.lblAncho.Name = "lblAncho";
             this.lblAncho.Size = new System.Drawing.Size(51, 16);
             this.lblAncho.TabIndex = 2;
@@ -74,14 +74,14 @@
             // 
             // txtAlto
             // 
-            this.txtAlto.Location = new System.Drawing.Point(95, 42);
+            this.txtAlto.Location = new System.Drawing.Point(254, 187);
             this.txtAlto.Name = "txtAlto";
             this.txtAlto.Size = new System.Drawing.Size(100, 22);
             this.txtAlto.TabIndex = 3;
             // 
             // txtAncho
             // 
-            this.txtAncho.Location = new System.Drawing.Point(95, 74);
+            this.txtAncho.Location = new System.Drawing.Point(254, 219);
             this.txtAncho.Name = "txtAncho";
             this.txtAncho.Size = new System.Drawing.Size(100, 22);
             this.txtAncho.TabIndex = 4;
@@ -89,15 +89,15 @@
             // lblSalidas
             // 
             this.lblSalidas.AutoSize = true;
-            this.lblSalidas.Location = new System.Drawing.Point(267, 13);
+            this.lblSalidas.Location = new System.Drawing.Point(77, 292);
             this.lblSalidas.Name = "lblSalidas";
-            this.lblSalidas.Size = new System.Drawing.Size(61, 16);
+            this.lblSalidas.Size = new System.Drawing.Size(56, 16);
             this.lblSalidas.TabIndex = 5;
-            this.lblSalidas.Text = "Entradas";
+            this.lblSalidas.Text = "Salidas:";
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(270, 42);
+            this.btnCalcular.Location = new System.Drawing.Point(381, 477);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 6;
@@ -107,7 +107,7 @@
             // 
             // btnResetear
             // 
-            this.btnResetear.Location = new System.Drawing.Point(270, 74);
+            this.btnResetear.Location = new System.Drawing.Point(279, 477);
             this.btnResetear.Name = "btnResetear";
             this.btnResetear.Size = new System.Drawing.Size(75, 23);
             this.btnResetear.TabIndex = 7;
@@ -118,7 +118,7 @@
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(375, 48);
+            this.lblPerimetro.Location = new System.Drawing.Point(157, 326);
             this.lblPerimetro.Name = "lblPerimetro";
             this.lblPerimetro.Size = new System.Drawing.Size(71, 16);
             this.lblPerimetro.TabIndex = 8;
@@ -126,7 +126,7 @@
             // 
             // txtPerimetro
             // 
-            this.txtPerimetro.Location = new System.Drawing.Point(452, 42);
+            this.txtPerimetro.Location = new System.Drawing.Point(254, 319);
             this.txtPerimetro.Name = "txtPerimetro";
             this.txtPerimetro.ReadOnly = true;
             this.txtPerimetro.Size = new System.Drawing.Size(100, 22);
@@ -135,7 +135,7 @@
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(404, 77);
+            this.lblArea.Location = new System.Drawing.Point(186, 355);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(42, 16);
             this.lblArea.TabIndex = 10;
@@ -143,7 +143,7 @@
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(452, 75);
+            this.txtArea.Location = new System.Drawing.Point(254, 352);
             this.txtArea.Name = "txtArea";
             this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(100, 22);
@@ -151,7 +151,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(605, 41);
+            this.btnSalir.Location = new System.Drawing.Point(173, 477);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 12;
@@ -162,7 +162,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(13, 109);
+            this.lblMensaje.Location = new System.Drawing.Point(87, 415);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 13;
@@ -170,9 +170,9 @@
             // panelDibujo
             // 
             this.panelDibujo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDibujo.Location = new System.Drawing.Point(10, 143);
+            this.panelDibujo.Location = new System.Drawing.Point(600, 72);
             this.panelDibujo.Name = "panelDibujo";
-            this.panelDibujo.Size = new System.Drawing.Size(684, 300);
+            this.panelDibujo.Size = new System.Drawing.Size(596, 464);
             this.panelDibujo.TabIndex = 14;
             this.panelDibujo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDibujo_Paint);
             // 
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 450);
+            this.ClientSize = new System.Drawing.Size(1361, 687);
             this.Controls.Add(this.panelDibujo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSalir);
@@ -198,6 +198,8 @@
             this.Controls.Add(this.lblEntradas);
             this.Name = "FrmElipse";
             this.Text = "FrmElipse";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmElipse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -50,7 +50,7 @@
             // lblEntradas
             // 
             this.lblEntradas.AutoSize = true;
-            this.lblEntradas.Location = new System.Drawing.Point(52, 39);
+            this.lblEntradas.Location = new System.Drawing.Point(92, 104);
             this.lblEntradas.Name = "lblEntradas";
             this.lblEntradas.Size = new System.Drawing.Size(64, 16);
             this.lblEntradas.TabIndex = 0;
@@ -59,7 +59,7 @@
             // lblRadio
             // 
             this.lblRadio.AutoSize = true;
-            this.lblRadio.Location = new System.Drawing.Point(75, 80);
+            this.lblRadio.Location = new System.Drawing.Point(146, 145);
             this.lblRadio.Name = "lblRadio";
             this.lblRadio.Size = new System.Drawing.Size(50, 16);
             this.lblRadio.TabIndex = 1;
@@ -69,7 +69,7 @@
             // lblAnguloInicio
             // 
             this.lblAnguloInicio.AutoSize = true;
-            this.lblAnguloInicio.Location = new System.Drawing.Point(75, 115);
+            this.lblAnguloInicio.Location = new System.Drawing.Point(146, 180);
             this.lblAnguloInicio.Name = "lblAnguloInicio";
             this.lblAnguloInicio.Size = new System.Drawing.Size(89, 16);
             this.lblAnguloInicio.TabIndex = 2;
@@ -78,7 +78,7 @@
             // lblAnguloFin
             // 
             this.lblAnguloFin.AutoSize = true;
-            this.lblAnguloFin.Location = new System.Drawing.Point(75, 153);
+            this.lblAnguloFin.Location = new System.Drawing.Point(146, 218);
             this.lblAnguloFin.Name = "lblAnguloFin";
             this.lblAnguloFin.Size = new System.Drawing.Size(73, 16);
             this.lblAnguloFin.TabIndex = 3;
@@ -86,28 +86,28 @@
             // 
             // txtRadio
             // 
-            this.txtRadio.Location = new System.Drawing.Point(167, 73);
+            this.txtRadio.Location = new System.Drawing.Point(252, 139);
             this.txtRadio.Name = "txtRadio";
             this.txtRadio.Size = new System.Drawing.Size(100, 22);
             this.txtRadio.TabIndex = 4;
             // 
             // txtAnguloInicio
             // 
-            this.txtAnguloInicio.Location = new System.Drawing.Point(167, 108);
+            this.txtAnguloInicio.Location = new System.Drawing.Point(252, 174);
             this.txtAnguloInicio.Name = "txtAnguloInicio";
             this.txtAnguloInicio.Size = new System.Drawing.Size(100, 22);
             this.txtAnguloInicio.TabIndex = 5;
             // 
             // txtAnguloFin
             // 
-            this.txtAnguloFin.Location = new System.Drawing.Point(167, 146);
+            this.txtAnguloFin.Location = new System.Drawing.Point(252, 212);
             this.txtAnguloFin.Name = "txtAnguloFin";
             this.txtAnguloFin.Size = new System.Drawing.Size(100, 22);
             this.txtAnguloFin.TabIndex = 6;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(32, 216);
+            this.btnCalcular.Location = new System.Drawing.Point(235, 510);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             // btnResetear
             // 
-            this.btnResetear.Location = new System.Drawing.Point(137, 216);
+            this.btnResetear.Location = new System.Drawing.Point(340, 510);
             this.btnResetear.Name = "btnResetear";
             this.btnResetear.Size = new System.Drawing.Size(75, 23);
             this.btnResetear.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(244, 216);
+            this.btnSalir.Location = new System.Drawing.Point(447, 510);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 9;
@@ -138,7 +138,7 @@
             // lblSalidas
             // 
             this.lblSalidas.AutoSize = true;
-            this.lblSalidas.Location = new System.Drawing.Point(55, 275);
+            this.lblSalidas.Location = new System.Drawing.Point(92, 286);
             this.lblSalidas.Name = "lblSalidas";
             this.lblSalidas.Size = new System.Drawing.Size(56, 16);
             this.lblSalidas.TabIndex = 10;
@@ -146,7 +146,7 @@
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(167, 350);
+            this.txtArea.Location = new System.Drawing.Point(252, 360);
             this.txtArea.Name = "txtArea";
             this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(100, 22);
@@ -154,7 +154,7 @@
             // 
             // txtPerimetro
             // 
-            this.txtPerimetro.Location = new System.Drawing.Point(167, 315);
+            this.txtPerimetro.Location = new System.Drawing.Point(252, 325);
             this.txtPerimetro.Name = "txtPerimetro";
             this.txtPerimetro.ReadOnly = true;
             this.txtPerimetro.Size = new System.Drawing.Size(100, 22);
@@ -163,7 +163,7 @@
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(75, 353);
+            this.lblArea.Location = new System.Drawing.Point(146, 363);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(39, 16);
             this.lblArea.TabIndex = 16;
@@ -172,7 +172,7 @@
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(75, 321);
+            this.lblPerimetro.Location = new System.Drawing.Point(146, 331);
             this.lblPerimetro.Name = "lblPerimetro";
             this.lblPerimetro.Size = new System.Drawing.Size(68, 16);
             this.lblPerimetro.TabIndex = 15;
@@ -180,7 +180,7 @@
             // 
             // panelDibujo
             // 
-            this.panelDibujo.Location = new System.Drawing.Point(345, 31);
+            this.panelDibujo.Location = new System.Drawing.Point(724, 64);
             this.panelDibujo.Name = "panelDibujo";
             this.panelDibujo.Size = new System.Drawing.Size(426, 382);
             this.panelDibujo.TabIndex = 19;
@@ -189,7 +189,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(55, 403);
+            this.lblMensaje.Location = new System.Drawing.Point(92, 430);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 16);
             this.lblMensaje.TabIndex = 20;
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1325, 624);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panelDibujo);
             this.Controls.Add(this.txtArea);
@@ -218,6 +218,7 @@
             this.Controls.Add(this.lblEntradas);
             this.Name = "FrmPie";
             this.Text = "FrmPie";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -39,127 +39,154 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnResetear = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lblGrafico = new System.Windows.Forms.Label();
             this.panelDibujo = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblEntradas
             // 
             this.lblEntradas.AutoSize = true;
-            this.lblEntradas.Location = new System.Drawing.Point(15, 30);
+            this.lblEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntradas.Location = new System.Drawing.Point(79, 178);
+            this.lblEntradas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEntradas.Name = "lblEntradas";
-            this.lblEntradas.Size = new System.Drawing.Size(59, 15);
+            this.lblEntradas.Size = new System.Drawing.Size(81, 20);
             this.lblEntradas.TabIndex = 0;
             this.lblEntradas.Text = "Entradas:";
             // 
             // lblRadio
             // 
             this.lblRadio.AutoSize = true;
-            this.lblRadio.Location = new System.Drawing.Point(32, 67);
+            this.lblRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblRadio.Location = new System.Drawing.Point(132, 232);
+            this.lblRadio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRadio.Name = "lblRadio";
-            this.lblRadio.Size = new System.Drawing.Size(43, 15);
+            this.lblRadio.Size = new System.Drawing.Size(57, 20);
             this.lblRadio.TabIndex = 1;
             this.lblRadio.Text = "Radio:";
             // 
             // txtRadio
             // 
-            this.txtRadio.Location = new System.Drawing.Point(96, 67);
+            this.txtRadio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRadio.Location = new System.Drawing.Point(296, 232);
+            this.txtRadio.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtRadio.Name = "txtRadio";
-            this.txtRadio.Size = new System.Drawing.Size(66, 20);
+            this.txtRadio.Size = new System.Drawing.Size(106, 30);
             this.txtRadio.TabIndex = 2;
+            this.txtRadio.TextChanged += new System.EventHandler(this.txtRadio_TextChanged);
             // 
             // lblSalidas
             // 
             this.lblSalidas.AutoSize = true;
-            this.lblSalidas.Location = new System.Drawing.Point(317, 30);
+            this.lblSalidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblSalidas.Location = new System.Drawing.Point(79, 328);
+            this.lblSalidas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalidas.Name = "lblSalidas";
-            this.lblSalidas.Size = new System.Drawing.Size(51, 15);
+            this.lblSalidas.Size = new System.Drawing.Size(69, 20);
             this.lblSalidas.TabIndex = 3;
             this.lblSalidas.Text = "Salidas:";
             // 
             // lblPerimetro
             // 
             this.lblPerimetro.AutoSize = true;
-            this.lblPerimetro.Location = new System.Drawing.Point(317, 67);
+            this.lblPerimetro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblPerimetro.Location = new System.Drawing.Point(132, 395);
+            this.lblPerimetro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPerimetro.Name = "lblPerimetro";
-            this.lblPerimetro.Size = new System.Drawing.Size(64, 15);
+            this.lblPerimetro.Size = new System.Drawing.Size(87, 20);
             this.lblPerimetro.TabIndex = 4;
             this.lblPerimetro.Text = "Perímetro:";
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(317, 106);
+            this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblArea.Location = new System.Drawing.Point(132, 464);
+            this.lblArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(35, 15);
+            this.lblArea.Size = new System.Drawing.Size(49, 20);
             this.lblArea.TabIndex = 5;
             this.lblArea.Text = "Área:";
             // 
             // txtPerimetro
             // 
-            this.txtPerimetro.Location = new System.Drawing.Point(427, 67);
+            this.txtPerimetro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPerimetro.Location = new System.Drawing.Point(296, 395);
+            this.txtPerimetro.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPerimetro.Name = "txtPerimetro";
-            this.txtPerimetro.Size = new System.Drawing.Size(72, 20);
+            this.txtPerimetro.Size = new System.Drawing.Size(106, 30);
             this.txtPerimetro.TabIndex = 6;
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(427, 101);
+            this.txtArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtArea.Location = new System.Drawing.Point(296, 455);
+            this.txtArea.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(72, 20);
+            this.txtArea.Size = new System.Drawing.Size(106, 30);
             this.txtArea.TabIndex = 7;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(195, 67);
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
+            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalcular.FlatAppearance.BorderSize = 0;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.Location = new System.Drawing.Point(324, 609);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(112, 40);
             this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.UseVisualStyleBackColor = false;
             // 
             // btnResetear
             // 
-            this.btnResetear.Location = new System.Drawing.Point(195, 106);
+            this.btnResetear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.btnResetear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetear.FlatAppearance.BorderSize = 0;
+            this.btnResetear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetear.ForeColor = System.Drawing.Color.White;
+            this.btnResetear.Location = new System.Drawing.Point(482, 609);
+            this.btnResetear.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnResetear.Name = "btnResetear";
-            this.btnResetear.Size = new System.Drawing.Size(75, 23);
+            this.btnResetear.Size = new System.Drawing.Size(112, 40);
             this.btnResetear.TabIndex = 9;
             this.btnResetear.Text = "Resetear";
-            this.btnResetear.UseVisualStyleBackColor = true;
+            this.btnResetear.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(539, 87);
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(169, 609);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(112, 40);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // lblGrafico
-            // 
-            this.lblGrafico.AutoSize = true;
-            this.lblGrafico.Location = new System.Drawing.Point(16, 157);
-            this.lblGrafico.Name = "lblGrafico";
-            this.lblGrafico.Size = new System.Drawing.Size(49, 15);
-            this.lblGrafico.TabIndex = 11;
-            this.lblGrafico.Text = "Gráfica:";
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // panelDibujo
             // 
+            this.panelDibujo.BackColor = System.Drawing.Color.White;
             this.panelDibujo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDibujo.Location = new System.Drawing.Point(33, 216);
+            this.panelDibujo.Location = new System.Drawing.Point(677, 79);
+            this.panelDibujo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.panelDibujo.Name = "panelDibujo";
-            this.panelDibujo.Size = new System.Drawing.Size(547, 151);
+            this.panelDibujo.Size = new System.Drawing.Size(773, 715);
             this.panelDibujo.TabIndex = 12;
             // 
             // FrmTrebol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 391);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.ClientSize = new System.Drawing.Size(1498, 1055);
             this.Controls.Add(this.panelDibujo);
-            this.Controls.Add(this.lblGrafico);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnResetear);
             this.Controls.Add(this.btnCalcular);
@@ -171,8 +198,12 @@
             this.Controls.Add(this.txtRadio);
             this.Controls.Add(this.lblRadio);
             this.Controls.Add(this.lblEntradas);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "FrmTrebol";
             this.Text = "FrmTrebol";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +222,6 @@
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnResetear;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Label lblGrafico;
         private System.Windows.Forms.Panel panelDibujo;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using _2d_shape_mvc.ec.edu.espe.controlador;
 using _2d_shape_mvc.ec.edu.espe.dibujador;
 using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         public FrmTrebol()
         {
             InitializeComponent();
+            TemaVisual.Aplicar(this);
 
             controlador = new FiguraControlador();
             validador = new Validacion();
@@ -92,6 +94,11 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtRadio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

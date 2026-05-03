@@ -1,6 +1,7 @@
 ﻿using _2d_shape_mvc.ec.edu.espe.controlador;
 using _2d_shape_mvc.ec.edu.espe.dibujador;
 using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         public FrmCirculo()
         {
             InitializeComponent();
+            TemaVisual.Aplicar(this);
             this.v = new Validacion();
             this.controlador = new FiguraControlador();
         }
@@ -85,6 +87,21 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         }
 
         private void FrmCirculo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRadio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPerimetro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtArea_TextChanged(object sender, EventArgs e)
         {
 
         }
