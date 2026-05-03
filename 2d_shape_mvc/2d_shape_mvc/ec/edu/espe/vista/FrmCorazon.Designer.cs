@@ -39,8 +39,9 @@
             this.btnResetear = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.txtTamanio = new System.Windows.Forms.TextBox();
-            this.lblTamanio = new System.Windows.Forms.Label();
+            this.lblLado = new System.Windows.Forms.Label();
             this.lblEntradas = new System.Windows.Forms.Label();
+            this.lblNota = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMensaje
@@ -139,14 +140,14 @@
             this.txtTamanio.Size = new System.Drawing.Size(100, 22);
             this.txtTamanio.TabIndex = 16;
             // 
-            // lblTamanio
+            // lblLado
             // 
-            this.lblTamanio.AutoSize = true;
-            this.lblTamanio.Location = new System.Drawing.Point(174, 197);
-            this.lblTamanio.Name = "lblTamanio";
-            this.lblTamanio.Size = new System.Drawing.Size(64, 16);
-            this.lblTamanio.TabIndex = 15;
-            this.lblTamanio.Text = "Tamaño: ";
+            this.lblLado.AutoSize = true;
+            this.lblLado.Location = new System.Drawing.Point(174, 197);
+            this.lblLado.Name = "lblLado";
+            this.lblLado.Size = new System.Drawing.Size(41, 16);
+            this.lblLado.TabIndex = 15;
+            this.lblLado.Text = "Lado:";
             // 
             // lblEntradas
             // 
@@ -157,11 +158,21 @@
             this.lblEntradas.TabIndex = 14;
             this.lblEntradas.Text = "Entradas:";
             // 
+            // lblNota
+            // 
+            this.lblNota.AutoSize = true;
+            this.lblNota.Location = new System.Drawing.Point(177, 226);
+            this.lblNota.Name = "lblNota";
+            this.lblNota.Size = new System.Drawing.Size(313, 16);
+            this.lblNota.TabIndex = 28;
+            this.lblNota.Text = "*Lado tanto del rombo como, diametro semicirculos";
+            // 
             // FrmCorazon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 648);
+            this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panelDibujo);
             this.Controls.Add(this.txtArea);
@@ -173,7 +184,7 @@
             this.Controls.Add(this.btnResetear);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtTamanio);
-            this.Controls.Add(this.lblTamanio);
+            this.Controls.Add(this.lblLado);
             this.Controls.Add(this.lblEntradas);
             this.Name = "FrmCorazon";
             this.Text = "FrmCorazon";
@@ -196,7 +207,8 @@
         private System.Windows.Forms.Button btnResetear;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.TextBox txtTamanio;
-        private System.Windows.Forms.Label lblTamanio;
+        private System.Windows.Forms.Label lblLado;
         private System.Windows.Forms.Label lblEntradas;
+        private System.Windows.Forms.Label lblNota;
     }
 }
