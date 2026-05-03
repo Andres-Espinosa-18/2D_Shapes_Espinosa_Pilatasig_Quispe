@@ -12,10 +12,10 @@ namespace _2d_shape_mvc.ec.edu.espe.modelo
         public double Lado { get; set; }
 
         // El lado del rombo
-        private double ladoRombo => Math.Sqrt(2) * Lado;
+        public double ladoRombo => Math.Sqrt(2) * Lado;
 
         // Radio de cada semicírculo = mitad del lado del rombo
-        private double radioSemi => ladoRombo / 2.0;
+        public double radioSemi => ladoRombo / 2.0;
 
         // Perímetro: mitad inferior del rombo (2 lados) + 2 semicírculos (= 1 círculo completo)
         public double Perimetro => 2 * ladoRombo + 2 * Math.PI * radioSemi;
