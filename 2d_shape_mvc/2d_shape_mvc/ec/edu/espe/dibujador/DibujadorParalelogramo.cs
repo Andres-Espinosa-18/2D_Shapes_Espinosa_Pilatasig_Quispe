@@ -87,7 +87,9 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             using (Pen lapiz = new Pen(Color.DarkCyan, 3))
+            using (Brush brocha = new SolidBrush(lapiz.Color))
             {
+                g.FillPolygon(brocha, puntosTransformados.ToArray());
                 g.DrawPolygon(lapiz, puntosTransformados.ToArray());
             }
         }

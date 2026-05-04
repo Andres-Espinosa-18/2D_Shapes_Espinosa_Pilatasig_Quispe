@@ -18,16 +18,21 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
         }
         public void dibujarFigura(Graphics g, int w, int h)
         {
-            int margen = 20;
+            int margen = 40; // 🔥 tu condición
 
             double ancho = elipse.getAncho();
             double alto = elipse.getAlto();
 
-            // Escala proporcional
-            double escala = Math.Min(
-                (w - 2 * margen) / ancho,
-                (h - 2 * margen) / alto
-            );
+            double escala = 1.0;
+
+            // Verificar si se sale del panel (considerando margen)
+            if (ancho > (w - 2 * margen) || alto > (h - 2 * margen))
+            {
+                escala = Math.Min(
+                    (w - 2 * margen) / ancho,
+                    (h - 2 * margen) / alto
+                );
+            }
 
             float drawWidth = (float)(ancho * escala);
             float drawHeight = (float)(alto * escala);
@@ -41,8 +46,10 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             using (Pen p = new Pen(Color.BurlyWood, 3))
+            using (Brush b = new SolidBrush(p.Color))
             {
-                g.DrawEllipse(p, x, y, drawWidth, drawHeight);
+                g.FillEllipse(b, x, y, drawWidth, drawHeight);
+                g.DrawEllipse(p, x, y, drawWidth, drawHeight); 
             }
         }
     }
