@@ -33,10 +33,11 @@ namespace _2d_shape_mvc.ec.edu.espe.modelo
             List<PointF> puntos = new List<PointF>();
 
             double anguloInicial = -Math.PI / 2;
+            double rotación = 180 * Math.PI / 180;
 
             for (int i = 0; i < numPuntas * 2; i++)
             {
-                double angulo = anguloInicial + i * Math.PI / numPuntas;
+                double angulo = anguloInicial + i * Math.PI / numPuntas + rotación;
 
                 double radio = (i % 2 == 0) ? radioExterior: radioInterior;
 
