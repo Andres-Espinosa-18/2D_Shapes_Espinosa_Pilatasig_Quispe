@@ -20,12 +20,11 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
         {
             if (estrella == null) return;
 
-            int margen = 20;
+            int margen = 40;
 
-            // 🔷 Obtener vértices del modelo (centrados en 0,0)
             var puntos = estrella.generarVertices();
 
-            // 🔷 Calcular tamaño máximo actual (bounding box)
+            // 🔷 Bounding box
             float maxX = puntos.Max(p => p.X);
             float minX = puntos.Min(p => p.X);
             float maxY = puntos.Max(p => p.Y);
@@ -34,17 +33,22 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             float ancho = maxX - minX;
             float alto = maxY - minY;
 
-            // 🔷 Escala proporcional
-            float escala = Math.Min(
-                (w - 2 * margen) / ancho,
-                (h - 2 * margen) / alto
-            );
+            float escala = 1f;
+
+            // 🔥 Solo escalar si se va a salir del panel
+            if ((ancho + 2 * margen) > w || (alto + 2 * margen) > h)
+            {
+                escala = Math.Min(
+                    (w - 2 * margen) / ancho,
+                    (h - 2 * margen) / alto
+                );
+            }
 
             // 🔷 Centro del panel
             float cx = w / 2f;
             float cy = h / 2f;
 
-            // 🔷 Transformar puntos (escala + traslación)
+            // 🔷 Transformar puntos (escala + centrado)
             List<PointF> puntosTransformados = new List<PointF>();
 
             foreach (var p in puntos)
@@ -55,12 +59,16 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
                 puntosTransformados.Add(new PointF(x, y));
             }
 
-            // 🔷 Mejor calidad de dibujo
+            g.Clear(Color.White);
             g.SmoothingMode = SmoothingMode.AntiAlias;
 
             using (Pen lapiz = new Pen(Color.Gold, 3))
+            using (Brush brush = new SolidBrush(lapiz.Color)) // 🔥 mismo color
             {
-                g.DrawPolygon(lapiz, puntosTransformados.ToArray());
+                PointF[] pts = puntosTransformados.ToArray();
+
+                g.FillPolygon(brush, pts); // 🔥 relleno
+                g.DrawPolygon(lapiz, pts); // borde
             }
         }
     }
