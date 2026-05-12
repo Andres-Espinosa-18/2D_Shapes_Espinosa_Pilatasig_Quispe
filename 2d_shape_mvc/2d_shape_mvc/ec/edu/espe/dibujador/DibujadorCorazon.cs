@@ -17,7 +17,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             this.corazon = corazon;
         }
 
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             float l = (float)corazon.Lado;
             float radio = (float)corazon.radioSemi;
@@ -46,22 +46,22 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
 
                 // --- Semicírculo izquierdo ---
                 // Centro entre vértice izquierdo y vértice superior del rombo
-                float scxL = (left.X + top.X) / 2f;
-                float scyL = (left.Y + top.Y) / 2f;
+                float scxL = (left.X + bottom.X) / 2f;
+                float scyL = (left.Y + bottom.Y) / 2f;
                 
                 g.FillPie(brush,
                     scxL - radio, scyL - radio,
                     radio * 2, radio * 2,
-                    135f,   // ángulo de inicio: apunta hacia adentro del rombo
+                    45f,   // ángulo de inicio: apunta hacia adentro del rombo
                     180f);       // semicírculo = 180
                 // --- Semicírculo derecho ---
-                float scxR = (right.X + top.X) / 2f;
-                float scyR = (right.Y + top.Y) / 2f;
+                float scxR = (right.X + bottom.X) / 2f;
+                float scyR = (right.Y + bottom.Y) / 2f;
 
                 g.FillPie(brush,
                     scxR - radio, scyR - radio,
                     radio * 2, radio * 2,
-                    225f,        // ángulo de inicio: apunta hacia adentro del rombo  
+                    315f,        // ángulo de inicio: apunta hacia adentro del rombo  
                     180f);       // semicírculo = 180°
             }
         }

@@ -9,7 +9,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
         private Trebol trebol;
         public DibujadorTrebol(Trebol trebol) { this.trebol = trebol; }
 
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             g.Clear(Color.White);
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;

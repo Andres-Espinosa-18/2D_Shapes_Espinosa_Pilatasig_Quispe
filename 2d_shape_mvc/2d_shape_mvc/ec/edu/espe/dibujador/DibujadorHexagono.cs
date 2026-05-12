@@ -14,7 +14,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             this.hexagono = hexagono;
         }
 
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             // Limpiar el fondo
             g.Clear(Color.White);
@@ -25,14 +25,21 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
 
             // Escala libre: multiplicamos el lado ingresado por 4 para que sea visible
             // En un hexágono regular, el radio (distancia del centro al vértice) es igual a su lado
-            float radio = (float)(hexagono.getLado() * 4);
+            int numPoly = 6;
+            // Convertimos 180 a radianes para la función Sin
+            double anguloCentralRad = (180.0 / numPoly) * Math.PI / 180;
 
+            // Radio real necesario para que el lado mida lo que dice 'hexagono.getLado()'
+            // Aplicamos el factor de escala * 4 que ya tenías
+            float ladoEscalado = (float)(hexagono.getLado() * 4);
+            float radio = (float)(ladoEscalado / (2 * Math.Sin(anguloCentralRad)));
             List<PointF> vertices = new List<PointF>();
-
+            double polygonAng = 360 / numPoly;
+            double rotacion = (90 - (polygonAng / 2)) * Math.PI / 180;
             // Calcular los 6 puntos
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < numPoly; i++)
             {
-                double angulo = (i * 60) * Math.PI / 180;
+                double angulo = (i * polygonAng) * Math.PI / 180 + rotacion;
 
                 float x = (float)(radio * Math.Cos(angulo));
                 float y = (float)(radio * Math.Sin(angulo));

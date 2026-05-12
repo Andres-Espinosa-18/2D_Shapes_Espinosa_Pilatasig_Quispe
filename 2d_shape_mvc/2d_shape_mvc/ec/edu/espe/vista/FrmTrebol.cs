@@ -1,10 +1,11 @@
-﻿using _2d_shape_mvc.ec.edu.espe.controlador;
-using _2d_shape_mvc.ec.edu.espe.dibujador;
-using _2d_shape_mvc.ec.edu.espe.utils;
-using _2D_shape_mvc;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using _2d_shape_mvc.ec.edu.espe.controlador;
+using _2d_shape_mvc.ec.edu.espe.dibujador;
+using _2d_shape_mvc.ec.edu.espe.modelo;
+using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
@@ -12,6 +13,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
     {
         private FiguraControlador controlador;
         private Validacion validador;
+        private Deformacion deformador;
 
         public FrmTrebol()
         {
@@ -26,6 +28,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             btnCalcular.Click += btnCalcular_Click;
             btnResetear.Click += btnResetear_Click;
             btnSalir.Click += btnSalir_Click;
+            this.deformador = new Deformacion();
         }
 
         private void FrmTrebol_Load(object sender, EventArgs e)
@@ -71,7 +74,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
                 Graphics g = panelDibujo.CreateGraphics();
                 IDibujador dibujador = resultado.trebol.crearDibujador();
 
-                dibujador.dibujarFigura(g, panelDibujo.Width, panelDibujo.Height);
+                dibujador.dibujarFigura(g, panelDibujo.Width, panelDibujo.Height, deformador);
             }
             catch (Exception ex)
             {

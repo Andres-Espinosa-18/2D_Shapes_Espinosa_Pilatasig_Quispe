@@ -17,7 +17,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             this.pentagono = pentagono;
         }
 
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             double lado = pentagono.getLado();
             double radio = lado / (2 * Math.Cos(Math.PI / 5));

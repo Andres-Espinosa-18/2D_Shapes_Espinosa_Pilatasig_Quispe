@@ -67,6 +67,7 @@
     <Compile Include="ec\edu\espe\modelo\Cometa.cs" />
     <Compile Include="ec\edu\espe\modelo\Corazon.cs" />
     <Compile Include="ec\edu\espe\modelo\Cruz.cs" />
+    <Compile Include="ec\edu\espe\modelo\Deformacion.cs" />
     <Compile Include="ec\edu\espe\modelo\Elipse.cs" />
     <Compile Include="ec\edu\espe\modelo\Estrella.cs" />
     <Compile Include="ec\edu\espe\modelo\Hexagono.cs" />

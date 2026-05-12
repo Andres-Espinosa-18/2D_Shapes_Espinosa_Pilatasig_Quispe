@@ -16,7 +16,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
         {
             this.elipse = elipse;
         }
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             int margen = 40; // 🔥 tu condición
 

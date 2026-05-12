@@ -17,34 +17,40 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             this.cometa = cometa;
         }
 
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             double d1 = cometa.diagonal1;
             double d2 = cometa.diagonal2;
             double it = cometa.interseccion;
 
-            double escala = Math.Min((w - 40) / d2, (h - 40) / d1);
+            double escala = deformacion.Escala;
 
-            float dw = (float)(d2);
-            float dh = (float)(d1);
-            float di = (float)(d1 * it);
+            float dw = (float)(d2 * escala);
+            float dh = (float)(d1 * escala);
+            float di = (float)(d1 * it * escala);
 
-            float cx = w / 2f;
-            float cy = h / 2f;
-            float yTop = cy - (dh / 2f);
+            float cx = w / 2f + (float)deformacion.OffsetX;
+            float cy = h / 2f + (float)deformacion.OffsetY;
+            float yTop = 0 - (dh / 2f);
 
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             g.Clear(Color.White);
 
+            PointF[] puntos = new PointF[]
+            {
+                new PointF(0, yTop),
+                new PointF(dw/2f, yTop + di),
+                new PointF(0, yTop + dh),
+                new PointF(0 - dw/2f, yTop + di)
+            };
+
+            PointF[] puntosFinales = deformacion.RotarPuntos(puntos, cx, cy);
+
             using (SolidBrush brush = new SolidBrush(Color.Tomato))
             {
-                g.FillPolygon(brush, new PointF[] {
-                    new PointF(cx, yTop),            
-                    new PointF(cx + dw/2f, yTop + di), 
-                    new PointF(cx, yTop + dh),
-                    new PointF(cx - dw/2f, yTop + di)
-                });
+                g.FillPolygon(brush, puntosFinales);
+
             }
         }
     }

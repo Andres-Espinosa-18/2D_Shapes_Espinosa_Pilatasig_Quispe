@@ -42,6 +42,8 @@
             this.lblLado = new System.Windows.Forms.Label();
             this.lblEntradas = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
+            this.trbEscala = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trbEscala)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMensaje
@@ -167,11 +169,21 @@
             this.lblNota.TabIndex = 28;
             this.lblNota.Text = "*Lado tanto del rombo como, diametro semicirculos";
             // 
+            // trbEscala
+            // 
+            this.trbEscala.Location = new System.Drawing.Point(180, 395);
+            this.trbEscala.Minimum = 1;
+            this.trbEscala.Name = "trbEscala";
+            this.trbEscala.Size = new System.Drawing.Size(104, 56);
+            this.trbEscala.TabIndex = 29;
+            this.trbEscala.Value = 1;
+            // 
             // FrmCorazon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 648);
+            this.Controls.Add(this.trbEscala);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panelDibujo);
@@ -189,6 +201,7 @@
             this.Name = "FrmCorazon";
             this.Text = "FrmCorazon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.trbEscala)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +223,6 @@
         private System.Windows.Forms.Label lblLado;
         private System.Windows.Forms.Label lblEntradas;
         private System.Windows.Forms.Label lblNota;
+        private System.Windows.Forms.TrackBar trbEscala;
     }
 }

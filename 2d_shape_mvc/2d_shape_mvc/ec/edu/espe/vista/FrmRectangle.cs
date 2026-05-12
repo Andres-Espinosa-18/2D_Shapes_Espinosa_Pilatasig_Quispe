@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
@@ -21,12 +22,14 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         private Validacion v;
         private FiguraControlador controlador;
         private IDibujador dibujador;
+        private Deformacion deformador;
 
         public FrmRectangle(){
             InitializeComponent();
             TemaVisual.Aplicar(this);
             this.v = new Validacion();
             this.controlador = new FiguraControlador();
+            this.deformador = new Deformacion();
         }
 
         private void limpiarFormulario(){
@@ -74,7 +77,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             e.Graphics.Clear(Color.White);
             if (dibujador == null) return;
 
-            dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
+            dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height, deformador);
         }
 
         private void btnResetear_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace _2d_shape_mvc.ec.edu.espe.dibujador
             this.estrella = estrella;
         }
 
-        public void dibujarFigura(Graphics g, int w, int h)
+        public void dibujarFigura(Graphics g, int w, int h, Deformacion deformacion)
         {
             if (estrella == null) return;
 

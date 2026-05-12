@@ -1,10 +1,11 @@
-﻿using _2d_shape_mvc.ec.edu.espe.controlador;
-using _2d_shape_mvc.ec.edu.espe.dibujador;
-using _2d_shape_mvc.ec.edu.espe.utils;
-using _2D_shape_mvc;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using _2d_shape_mvc.ec.edu.espe.controlador;
+using _2d_shape_mvc.ec.edu.espe.dibujador;
+using _2d_shape_mvc.ec.edu.espe.modelo;
+using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
@@ -12,6 +13,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
     {
         private FiguraControlador controlador;
         private Validacion validador;
+        private Deformacion deformador;
 
         public FrmCruz()
         {
@@ -25,6 +27,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             btnCalcular.Click += btnCalcular_Click;
             btnRestaurar.Click += btnRestaurar_Click;
             btnSalir.Click += btnSalir_Click;
+            this.deformador = new Deformacion();
         }
 
         private void FrmCruz_Load(object sender, EventArgs e)
@@ -70,7 +73,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
                 Graphics g = panel1.CreateGraphics();
                 IDibujador dibujador = resultado.cruz.crearDibujador();
 
-                dibujador.dibujarFigura(g, panel1.Width, panel1.Height);
+                dibujador.dibujarFigura(g, panel1.Width, panel1.Height, deformador);
             }
             catch (Exception ex)
             {

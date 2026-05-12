@@ -14,7 +14,6 @@ namespace _2d_shape_mvc.ec.edu.espe.modelo
 
         public Estrella(int numPuntas, double radioExterior, double radioInterior)
         {
-            // 🔴 Validaciones críticas (modelo)
             Validacion.ValidarEstrella(numPuntas, radioExterior, radioInterior);
 
             this.numPuntas = numPuntas;

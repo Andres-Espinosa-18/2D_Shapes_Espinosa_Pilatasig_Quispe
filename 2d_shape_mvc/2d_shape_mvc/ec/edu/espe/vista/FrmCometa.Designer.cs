@@ -46,6 +46,8 @@
             this.panelDibujo = new System.Windows.Forms.Panel();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
+            this.trbEscala = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trbEscala)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEntrada
@@ -206,11 +208,22 @@
             this.lblNota.TabIndex = 17;
             this.lblNota.Text = "*Usando coma \",\"";
             // 
+            // trbEscala
+            // 
+            this.trbEscala.Location = new System.Drawing.Point(147, 414);
+            this.trbEscala.Minimum = 1;
+            this.trbEscala.Name = "trbEscala";
+            this.trbEscala.Size = new System.Drawing.Size(104, 56);
+            this.trbEscala.TabIndex = 18;
+            this.trbEscala.Value = 1;
+            this.trbEscala.Scroll += new System.EventHandler(this.trbEscala_Scroll);
+            // 
             // FrmCometa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1335, 683);
+            this.Controls.Add(this.trbEscala);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panelDibujo);
@@ -232,6 +245,9 @@
             this.Name = "FrmCometa";
             this.Text = "FrmCometa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCometa_KeyDown);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.FrmCometa_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.trbEscala)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +273,6 @@
         private System.Windows.Forms.Panel panelDibujo;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Label lblNota;
+        private System.Windows.Forms.TrackBar trbEscala;
     }
 }

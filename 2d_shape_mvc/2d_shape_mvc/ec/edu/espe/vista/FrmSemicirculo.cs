@@ -1,10 +1,11 @@
-﻿using _2d_shape_mvc.ec.edu.espe.controlador;
-using _2d_shape_mvc.ec.edu.espe.dibujador;
-using _2d_shape_mvc.ec.edu.espe.utils;
-using _2D_shape_mvc;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using _2d_shape_mvc.ec.edu.espe.controlador;
+using _2d_shape_mvc.ec.edu.espe.dibujador;
+using _2d_shape_mvc.ec.edu.espe.modelo;
+using _2d_shape_mvc.ec.edu.espe.utils;
+using _2D_shape_mvc;
 
 namespace _2d_shape_mvc.ec.edu.espe.vista
 {
@@ -12,6 +13,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
     {
         private FiguraControlador controlador;
         private Validacion validador;
+        private Deformacion deformador;
 
         public FrmSemicirculo()
         {
@@ -21,6 +23,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             // Inicializamos nuestras clases de lógica y validación
             controlador = new FiguraControlador();
             validador = new Validacion();
+            this.deformador = new Deformacion();
         }
 
         private void FrmSemicirculo_Load(object sender, EventArgs e)
@@ -69,7 +72,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
                 IDibujador dibujador = resultado.semicirculo.crearDibujador();
 
                 // Pasamos las dimensiones del panel para que el dibujador la centre
-                dibujador.dibujarFigura(g, panelDibujo.Width, panelDibujo.Height);
+                dibujador.dibujarFigura(g, panelDibujo.Width, panelDibujo.Height, deformador);
             }
             catch (Exception ex)
             {

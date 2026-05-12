@@ -1,5 +1,6 @@
 ﻿using _2d_shape_mvc.ec.edu.espe.controlador;
 using _2d_shape_mvc.ec.edu.espe.dibujador;
+using _2d_shape_mvc.ec.edu.espe.modelo;
 using _2d_shape_mvc.ec.edu.espe.utils;
 using _2D_shape_mvc;
 using System;
@@ -19,12 +20,15 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         private Validacion v;
         private FiguraControlador controlador;
         private IDibujador dibujador;
+        private Deformacion deformador;
         public FrmCometa()
         {
             InitializeComponent();
             TemaVisual.Aplicar(this);
+            this.KeyPreview = true;
             this.v = new Validacion();
             this.controlador = new FiguraControlador();
+            this.deformador = new Deformacion();
         }
 
         private void limpiarFormulario()
@@ -97,7 +101,7 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
             e.Graphics.Clear(Color.White);
             if (dibujador == null) return;
 
-            dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height);
+            dibujador.dibujarFigura(e.Graphics, panelDibujo.Width, panelDibujo.Height, deformador);
         }
 
         private void btnResetear_Click(object sender, EventArgs e)
@@ -113,6 +117,62 @@ namespace _2d_shape_mvc.ec.edu.espe.vista
         private void txtPerimetro_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void trbEscala_Scroll(object sender, EventArgs e)
+        {
+            deformador.Escala = trbEscala.Value;
+            panelDibujo.Invalidate();
+        }
+
+        private void FrmCometa_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+
+                case Keys.Up: deformador.OffsetY -= 15; break;
+                case Keys.Down: deformador.OffsetY += 15; break;
+                case Keys.Left: deformador.OffsetX -= 15; break;
+                case Keys.Right: deformador.OffsetX += 15; break;
+
+
+                case Keys.A:
+                    deformador.angulo -= 0.0872664626f;
+
+                    break;
+                case Keys.D:
+                    deformador.angulo += 0.0872664626f;
+
+                    break;
+            }
+
+
+            panelDibujo.Invalidate();
+        }
+
+        private void FrmCometa_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+
+                case Keys.Up: deformador.OffsetY -= 15; break;
+                case Keys.Down: deformador.OffsetY += 15; break;
+                case Keys.Left: deformador.OffsetX -= 15; break;
+                case Keys.Right: deformador.OffsetX += 15; break;
+
+
+                case Keys.A:
+                    deformador.angulo -= 20f;
+
+                    break;
+                case Keys.D:
+                    deformador.angulo += 20f;
+
+                    break;
+            }
+
+
+            panelDibujo.Invalidate();
         }
     }
 }
